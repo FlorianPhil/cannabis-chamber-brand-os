@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Posse · Creative Direction B2 · CCC Brand OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Poppins:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+:root {
+  --accent: #C9A96E;
+  --accent-soft: rgba(201, 169, 110, 0.10);
+  --bg: #F5EFE0;
+  --dark: #1A1A1A;
+  --text: #1A1A1A;
+  --muted: #7A6E5C;
+  --border: #D9CEBF;
+  --border-soft: #EDE6D8;
+  --ff-h: 'Cormorant Garamond', Georgia, serif;
+  --ff-b: 'EB Garamond', Georgia, serif;
+  --secondary: #1B3A2D;
+  --burgundy: #6B2737;
+  --warm-gray: #A89F91;
+  --parchment: #EDE6D8;
+}
+
+/* Page-level overrides for Posse */
+body {
+  background: var(--bg);
+}
+aside.sidebar {
+  font-family: 'Poppins', sans-serif;
+  background: #F0E9D5;
+  border-right-color: var(--border);
+}
+aside.sidebar .brand-mark .wordmark {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+aside.sidebar .brand-mark .sub {
+  font-family: 'Poppins', sans-serif;
+}
+aside.sidebar .nav-section > .label {
+  font-family: 'Poppins', sans-serif;
+}
+aside.sidebar .group-label {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+aside.sidebar .nav-list a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.5px;
+}
+aside.sidebar .toolbar-mini {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero overrides */
+h1.page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(52px, 7vw, 96px);
+  letter-spacing: -0.01em;
+  line-height: 0.94;
+}
+.page-subtitle {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(17px, 1.9vw, 21px);
+  line-height: 1.5;
+  color: var(--muted);
+  font-style: italic;
+}
+.eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+.meta-row {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5px;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+/* Step headers */
+.cd-step-header {
+  border-top-color: var(--border);
+}
+.cd-step-num {
+  font-family: 'Poppins', sans-serif;
+}
+.cd-step-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.cd-step-sub {
+  font-family: 'Poppins', sans-serif;
+}
+.cd-step-desc {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Archetype overrides */
+.archetype-card.primary { background: var(--accent-soft); border-left: 3px solid var(--accent); }
+.archetype-card.primary .archetype-pct { color: var(--accent); }
+.archetype-pct {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 44px;
+}
+.archetype-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.archetype-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 8.5px;
+}
+.archetype-essence {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 13px;
+}
+
+/* Slider labels */
+.slider-section-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+}
+.slider-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+}
+.slider-axis-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 7.5px;
+}
+.slider-dot {
+  border-radius: 0; /* square for Posse — deliberate, structural */
+}
+
+/* Keyword cloud */
+.keyword {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5px;
+}
+
+/* Mood label */
+.mood-label {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Type specimen — serif everywhere */
+.type-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.94;
+  letter-spacing: -0.01em;
+}
+.type-body-sample {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.type-detail-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+}
+.type-detail-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 22px;
+}
+.type-detail-weights {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 13px;
+}
+.type-alphabet {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.12em;
+}
+.type-scale-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 8.5px;
+}
+.type-scale-sample {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Palette */
+.swatch-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+}
+.swatch-hex {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+}
+.swatch-use {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 12px;
+}
+
+/* Logo grid */
+.logo-cell.dark-cell {
+  background: var(--secondary);
+}
+
+/* Device spec */
+.device-spec-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+}
+.device-spec p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 14px;
+}
+
+/* Rules */
+.rule-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+}
+.rule-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: -0.005em;
+}
+.rule-body {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Brand Applications */
+.app-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 16px;
+}
+.app-desc {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 12px;
+}
+
+/* Footer */
+footer.page-footer {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5px;
+}
+
+/* Horizontal rule accent — Posse-specific divider element */
+.posse-rule {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 0 56px;
+}
+.posse-rule .r3 { height: 3px; background: var(--text); }
+.posse-rule .r2 { height: 2px; background: var(--accent); margin: 4px 0; }
+.posse-rule .r1 { height: 1px; background: var(--text); }
+
+/* Accent bar for step headers */
+.accent-bar {
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin: 14px 0 0;
+}
+
+/* Archetype reading block */
+.archetype-reading {
+  background: var(--border-soft);
+  border-left: 3px solid var(--accent);
+  padding: 20px 24px;
+  margin: 0 0 40px;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.archetype-reading strong { color: var(--text); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-mark">
+      <div class="wordmark">Cannabis Chamber<br>of Commerce</div>
+      <div class="sub">Brand OS &middot; v2 &middot; 2026</div>
+    </div>
+    <div class="nav-section">
+      <div class="label">Sections</div>
+      <details class="nav-group">
+        <summary><span class="group-letter">&middot;</span><span class="group-label">Overview</span></summary>
+        <div class="nav-list"><a href="index.html">Home</a></div>
+      </details>
+      <details class="nav-group">
+        <summary><span class="group-letter">A</span><span class="group-label">Focus Star</span></summary>
+        <div class="nav-list"><a href="focus-star.html">Strategy Foundation</a></div>
+      </details>
+      <details class="nav-group" open>
+        <summary><span class="group-letter">B</span><span class="group-label">Creative Direction</span></summary>
+        <div class="nav-list">
+          <a href="creative-direction-crew.html">B1 The Crew</a>
+          <a href="creative-direction-posse.html" class="active">B2 The Posse</a>
+          <a href="creative-direction-tribe.html">B3 The Tribe</a>
+        </div>
+      </details>
+    </div>
+    <div class="toolbar-mini">
+      <div class="row"><span>Source</span><strong>source.yaml</strong></div>
+      <div class="row"><span>Updated</span><strong>2026-04-30</strong></div>
+      <div class="row"><span>Phase</span><strong>Direction Review</strong></div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- HERO -->
+    <span class="eyebrow">Section B — Brand Identity</span>
+    <h1 class="page-title">The Posse.</h1>
+    <p class="page-subtitle">Classical. Luxurious. Institutional. The weight of a hundred-year-old industry association — translated into cannabis. This direction says: we have always been here.</p>
+
+    <div class="posse-rule">
+      <div class="r3"></div>
+      <div class="r2"></div>
+      <div class="r1"></div>
+    </div>
+
+    <div class="meta-row">
+      <span>Direction <strong>B2 of 3</strong></span>
+      <span>Era <span class="accent">Classic (2)</span></span>
+      <span>Energy <span class="accent">Calm (1)</span></span>
+      <span>Weight <span class="accent">Maximal (10)</span></span>
+      <span>Texture <span class="accent">Rich (10)</span></span>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.01 ARCHETYPE MIX ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.01</div>
+        <div>
+          <div class="cd-step-sub">Identity Weights</div>
+          <h2 class="cd-step-title">Archetype Mix</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="archetype-grid">
+        <div class="archetype-card primary">
+          <img src="assets/archetypes/Ruler.png" alt="Ruler archetype">
+          <div class="archetype-pct">55%</div>
+          <div class="archetype-name">Ruler</div>
+          <div class="archetype-role">Primary</div>
+          <div class="archetype-essence">Institutional gravitas. The Chamber seal as authority. Not elected — appointed by decades of presence. Classical forms that do not need to justify themselves.</div>
+          <div class="archetype-bar"><div class="archetype-bar-fill" style="width:55%"></div></div>
+        </div>
+        <div class="archetype-card">
+          <img src="assets/archetypes/Sage.png" alt="Sage archetype">
+          <div class="archetype-pct">30%</div>
+          <div class="archetype-name">Sage</div>
+          <div class="archetype-role">Edge</div>
+          <div class="archetype-essence">Curated expertise. Deep industry knowledge accumulated and published, not broadcast. The authority that earns a seat at the legislative table.</div>
+          <div class="archetype-bar"><div class="archetype-bar-fill" style="width:30%"></div></div>
+        </div>
+        <div class="archetype-card">
+          <img src="assets/archetypes/Magician.png" alt="Magician archetype">
+          <div class="archetype-pct">15%</div>
+          <div class="archetype-name">Magician</div>
+          <div class="archetype-role">Undertone</div>
+          <div class="archetype-essence">Quiet transformation. Presenting cannabis on ivory, behind an institutional seal, rewrites what legislators and legacy investors believe about this industry.</div>
+          <div class="archetype-bar"><div class="archetype-bar-fill" style="width:15%"></div></div>
+        </div>
+      </div>
+
+      <div class="archetype-reading">
+        <strong>In The Posse reading:</strong> Ruler shows up as institutional gravitas and the circular seal — the Chamber does not announce itself, it simply occupies the room. Sage as curated expertise published in position papers and policy briefs, the kind of authority that earns a seat at the legislative table. Magician as the quiet act of presenting cannabis in Cormorant Garamond, on ivory, behind a formal imprimatur — shifting perception without performance.
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.02 BRAND STYLE SLIDERS ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.02</div>
+        <div>
+          <div class="cd-step-sub">Character Mapping</div>
+          <h2 class="cd-step-title">Brand Style Sliders</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <!-- Group 1: Brand Character -->
+      <div class="slider-section-label">Group 1 — Brand Character</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Classic</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Era</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((2 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Modern</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Mature</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Age</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((2 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Youthful</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Feminine</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Gender</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((8 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Masculine</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Playful</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Tone</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((7 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Sophisticated</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Economical</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Price Signal</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((7 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Luxurious</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Traditional</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Innovation</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((7 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Innovative</span>
+        </div>
+
+      </div>
+
+      <!-- Group 2: Voice & Relationship -->
+      <div class="slider-section-label">Group 2 — Voice &amp; Relationship</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Institutional</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Voice</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((3 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Human</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Soft</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Authority</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((7 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Hard</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Quiet</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Volume</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((3 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Talkative</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Mysterious</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Openness</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((4 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Transparent</span>
+        </div>
+
+      </div>
+
+      <!-- Group 3: Visual Language -->
+      <div class="slider-section-label">Group 3 — Visual Language</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Literal</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Abstraction</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Abstract</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Geometric</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Form</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((4 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Organic</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Minimal</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Weight</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((10 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Maximal</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Clean</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Texture</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((10 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Rich</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Muted</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Color</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((3 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Vibrant</span>
+        </div>
+
+      </div>
+
+      <!-- Group 4: Energy & Edge -->
+      <div class="slider-section-label">Group 4 — Energy &amp; Edge</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Calm</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Energy</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Energetic</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Rational</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Reasoning</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Emotional</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Safe</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Edge</span>
+            <div class="slider-track">
+              <div class="slider-ticks">
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+                <div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div><div class="slider-tick"></div>
+              </div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Provocative</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.03 KEYWORD CLOUD ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.03</div>
+        <div>
+          <div class="cd-step-sub">Brand Character</div>
+          <h2 class="cd-step-title">The Vocabulary of The Posse</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="keyword-cloud">
+        <span class="keyword active">Classic</span>
+        <span class="keyword active">Mature</span>
+        <span class="keyword active">Masculine</span>
+        <span class="keyword active">Sophisticated</span>
+        <span class="keyword active">Luxurious</span>
+        <span class="keyword active">Institutional</span>
+        <span class="keyword active">Dense</span>
+        <span class="keyword active">Rational</span>
+        <span class="keyword active">Muted</span>
+        <span class="keyword active">Authoritative</span>
+        <span class="keyword">Modern</span>
+        <span class="keyword">Vibrant</span>
+        <span class="keyword">Human</span>
+        <span class="keyword">Minimal</span>
+        <span class="keyword">Energetic</span>
+        <span class="keyword">Abstract</span>
+        <span class="keyword">Provocative</span>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.04 MOOD BOARD ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.04</div>
+        <div>
+          <div class="cd-step-sub">Visual Mood</div>
+          <h2 class="cd-step-title">Reference World</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="moodboard-grid">
+        <div class="mood-item">
+          <img src="assets/mood/posse/01-boardroom.png" alt="The Room That Decides">
+          <div class="mood-label">The Room That Decides</div>
+        </div>
+        <div class="mood-item">
+          <img src="assets/mood/posse/02-architecture.png" alt="Institutional Permanence">
+          <div class="mood-label">Institutional Permanence</div>
+        </div>
+        <div class="mood-item">
+          <img src="assets/mood/posse/03-documents.png" alt="Heritage Materials">
+          <div class="mood-label">Heritage Materials</div>
+        </div>
+        <div class="mood-item">
+          <img src="assets/mood/posse/04-product.png" alt="Luxury Standard">
+          <div class="mood-label">Luxury Standard</div>
+        </div>
+        <div class="mood-item">
+          <img src="assets/mood/posse/05-portrait.png" alt="The Operator">
+          <div class="mood-label">The Operator</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.05 TYPOGRAPHY ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.05</div>
+        <div>
+          <div class="cd-step-sub">Type System</div>
+          <h2 class="cd-step-title">Cormorant &amp; Garamond</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="type-specimen">
+        <!-- Hero display -->
+        <div class="type-specimen-hero">
+          <div class="type-display">
+            Elevating <span class="accent">Standards.</span>
+          </div>
+          <p class="type-body-sample">
+            The Cannabis Chamber of Commerce maintains the institutional standard for operators who understand that authority is earned through decades, not headlines. We are the formal record of this industry's transformation from the underground to the boardroom.
+          </p>
+        </div>
+
+        <!-- Font detail cards -->
+        <div class="type-details">
+          <div class="type-detail-card">
+            <div class="type-detail-label">Display</div>
+            <div class="type-detail-name">Cormorant Garamond</div>
+            <div class="type-detail-weights">400 / 600 / 700 / Italic<br>Classical serif with high-contrast stroke<br>Optimized for large-scale institutional headers</div>
+          </div>
+          <div class="type-detail-card">
+            <div class="type-detail-label">Body</div>
+            <div class="type-detail-name" style="font-family:'EB Garamond',Georgia,serif; font-style:italic;">EB Garamond</div>
+            <div class="type-detail-weights">400 / 500 / Italic<br>17th-century humanist proportions<br>Optimized for long-form editorial at 15–18px</div>
+          </div>
+        </div>
+
+        <!-- Alphabet specimen -->
+        <div class="type-alphabet">
+          A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &nbsp; a b c d e f g h i j k l m n o p q r s t u v w x y z &nbsp; 0 1 2 3 4 5 6 7 8 9
+        </div>
+
+        <!-- Type scale -->
+        <div class="type-scale">
+          <div class="type-scale-row">
+            <span class="type-scale-label">XL / 96px</span>
+            <span class="type-scale-sample" style="font-size:96px; font-weight:700; font-style:italic; line-height:1;">CCC</span>
+          </div>
+          <div class="type-scale-row">
+            <span class="type-scale-label">LG / 48px</span>
+            <span class="type-scale-sample" style="font-size:48px; font-weight:700; font-style:italic; line-height:1.05;">Elevating Standards</span>
+          </div>
+          <div class="type-scale-row">
+            <span class="type-scale-label">MD / 24px</span>
+            <span class="type-scale-sample" style="font-size:24px; font-weight:600; font-style:italic;">The Chamber maintains the standard.</span>
+          </div>
+          <div class="type-scale-row">
+            <span class="type-scale-label">SM / 16px body</span>
+            <span class="type-scale-sample" style="font-family:'EB Garamond',Georgia,serif; font-size:16px; font-weight:400; line-height:1.75;">The Cannabis Chamber of Commerce is the institutional record of this industry. We do not campaign for legitimacy — we define what legitimacy requires.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.06 COLOR PALETTE ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.06</div>
+        <div>
+          <div class="cd-step-sub">Color System</div>
+          <h2 class="cd-step-title">Seven Positions</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="palette-grid">
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#C9A96E;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Antique Gold</div>
+            <div class="swatch-hex">#C9A96E</div>
+            <div class="swatch-use">Primary accent. Signal of institutional prestige. Borders, headings, key moments.</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#1A1A1A;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Carbon</div>
+            <div class="swatch-hex">#1A1A1A</div>
+            <div class="swatch-use">Primary dark. Near-black. High-contrast text and the weight of heavy rules.</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#F5EFE0; border-bottom:1px solid var(--border);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Ivory</div>
+            <div class="swatch-hex">#F5EFE0</div>
+            <div class="swatch-use">Canvas. Warm cream field. The color of aged parchment and earned authority.</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#1B3A2D;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Forest</div>
+            <div class="swatch-hex">#1B3A2D</div>
+            <div class="swatch-use">Deep green, institutional. Heavy surfaces and full-bleed sections.</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#EDE6D8; border-bottom:1px solid var(--border);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Parchment</div>
+            <div class="swatch-hex">#EDE6D8</div>
+            <div class="swatch-use">Surface. Card fills, sidebar tones, quiet background variation.</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#6B2737;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Burgundy</div>
+            <div class="swatch-hex">#6B2737</div>
+            <div class="swatch-use">Tertiary. Formal callouts, award badges, distinguished accents.</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#A89F91;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Warm Gray</div>
+            <div class="swatch-hex">#A89F91</div>
+            <div class="swatch-use">Secondary text. Captions, metadata, supporting information.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.07 LOGO EXPLORATION ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.07</div>
+        <div>
+          <div class="cd-step-sub">Mark Exploration</div>
+          <h2 class="cd-step-title">Three Circle Badges</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="logo-grid">
+        <!-- Cell 1: Institutional Seal (light bg) -->
+        <div class="logo-cell">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="92" stroke="#C9A96E" stroke-width="2" fill="none"/>
+            <circle cx="100" cy="100" r="88" stroke="#C9A96E" stroke-width="0.5" fill="none"/>
+            <circle cx="100" cy="100" r="70" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+            <defs>
+              <path id="topArcP1" d="M 24,100 A 76,76 0 0,1 176,100"/>
+              <path id="bottomArcP1" d="M 24,100 A 76,76 0 0,0 176,100"/>
+            </defs>
+            <text font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="10" fill="#1A1A1A" letter-spacing="3">
+              <textPath href="#topArcP1" startOffset="50%" text-anchor="middle">THE CANNABIS</textPath>
+            </text>
+            <text font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="9" fill="#1A1A1A" letter-spacing="3">
+              <textPath href="#bottomArcP1" startOffset="50%" text-anchor="middle">CHAMBER OF COMMERCE</textPath>
+            </text>
+            <!-- Gold dots as separators -->
+            <circle cx="24" cy="104" r="2" fill="#C9A96E"/>
+            <circle cx="176" cy="104" r="2" fill="#C9A96E"/>
+            <!-- Central serif C mark -->
+            <text x="100" y="115" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="56" fill="#1A1A1A">C</text>
+            <!-- Gold underline flourish -->
+            <line x1="78" y1="122" x2="122" y2="122" stroke="#C9A96E" stroke-width="1.5"/>
+          </svg>
+          <div class="logo-cell-label">Institutional Seal</div>
+        </div>
+
+        <!-- Cell 2: Forest Badge (dark bg) -->
+        <div class="logo-cell dark-cell">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="#1B3A2D"/>
+            <circle cx="100" cy="100" r="92" stroke="#C9A96E" stroke-width="2" fill="none"/>
+            <circle cx="100" cy="100" r="88" stroke="#C9A96E" stroke-width="0.5" fill="none"/>
+            <circle cx="100" cy="100" r="70" stroke="#C9A96E" stroke-width="0.5" fill="none"/>
+            <defs>
+              <path id="topArcP2" d="M 24,100 A 76,76 0 0,1 176,100"/>
+              <path id="bottomArcP2" d="M 24,100 A 76,76 0 0,0 176,100"/>
+            </defs>
+            <text font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="10" fill="#F5EFE0" letter-spacing="3">
+              <textPath href="#topArcP2" startOffset="50%" text-anchor="middle">THE CANNABIS</textPath>
+            </text>
+            <text font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="9" fill="#F5EFE0" letter-spacing="3">
+              <textPath href="#bottomArcP2" startOffset="50%" text-anchor="middle">CHAMBER OF COMMERCE</textPath>
+            </text>
+            <!-- Gold dots as separators -->
+            <circle cx="24" cy="104" r="2" fill="#C9A96E"/>
+            <circle cx="176" cy="104" r="2" fill="#C9A96E"/>
+            <!-- Central serif C mark -->
+            <text x="100" y="115" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="56" fill="#F5EFE0">C</text>
+            <!-- Gold underline flourish -->
+            <line x1="78" y1="122" x2="122" y2="122" stroke="#C9A96E" stroke-width="1.5"/>
+          </svg>
+          <div class="logo-cell-label">Forest Badge</div>
+        </div>
+
+        <!-- Cell 3: Coin/Stamp -->
+        <div class="logo-cell">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="coinGradP" cx="40%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#DCC590"/>
+                <stop offset="50%" stop-color="#C9A96E"/>
+                <stop offset="100%" stop-color="#A08348"/>
+              </radialGradient>
+            </defs>
+            <circle cx="100" cy="100" r="92" fill="url(#coinGradP)"/>
+            <circle cx="100" cy="100" r="86" stroke="#1A1A1A" stroke-width="1" fill="none" opacity="0.3"/>
+            <circle cx="100" cy="100" r="82" stroke="#1A1A1A" stroke-width="0.5" fill="none" opacity="0.2"/>
+            <!-- Central C -->
+            <text x="100" y="115" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="60" fill="#1A1A1A" opacity="0.8">C</text>
+            <!-- Ring text -->
+            <defs>
+              <path id="coinTopP" d="M 22,100 A 78,78 0 0,1 178,100"/>
+              <path id="coinBottomP" d="M 178,108 A 78,78 0 0,1 22,108"/>
+            </defs>
+            <text font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="9" fill="#1A1A1A" letter-spacing="2.5" opacity="0.7">
+              <textPath href="#coinTopP" startOffset="50%" text-anchor="middle">THE CANNABIS</textPath>
+            </text>
+            <text font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="8" fill="#1A1A1A" letter-spacing="2.5" opacity="0.7">
+              <textPath href="#coinBottomP" startOffset="50%" text-anchor="middle">CHAMBER OF COMMERCE</textPath>
+            </text>
+          </svg>
+          <div class="logo-cell-label">Coin / Stamp</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.08 SIGNATURE DEVICE ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.08</div>
+        <div>
+          <div class="cd-step-sub">Signature Device</div>
+          <h2 class="cd-step-title">The Rule System</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="device-showcase">
+        <div class="device-hero" style="background:#F5EFE0;">
+          <div style="background:#F5EFE0; width:100%; padding:48px 0; display:flex; flex-direction:column; gap:0; align-items:stretch;">
+            <div style="height:3px; background:#1A1A1A; width:100%;"></div>
+            <div style="height:2px; background:#C9A96E; width:100%; margin:4px 0;"></div>
+            <div style="height:1px; background:#1A1A1A; width:100%;"></div>
+            <div style="padding: 28px 0; font-family:'EB Garamond',Georgia,serif; font-size:13px; letter-spacing:0.25em; text-transform:uppercase; color:#7A6E5C; text-align:center;">The Cannabis Chamber of Commerce</div>
+            <div style="height:1px; background:#1A1A1A; width:100%;"></div>
+            <div style="height:2px; background:#C9A96E; width:100%; margin:4px 0;"></div>
+            <div style="height:3px; background:#1A1A1A; width:100%;"></div>
+          </div>
+        </div>
+        <div class="device-specs">
+          <div class="device-spec">
+            <div class="device-spec-label">Construction</div>
+            <p>Three-line stack: 3px Carbon, 2px Antique Gold, 1px Carbon. Mirrored top and bottom. The weight hierarchy creates visual gravity without imagery — authority descends from heavy to fine, then mirrors upward.</p>
+          </div>
+          <div class="device-spec">
+            <div class="device-spec-label">Application</div>
+            <p>Formal document headers, letterhead, presentation title pages, event programs, official Chamber publications, policy brief covers, membership certificates, and any surface requiring institutional imprimatur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.09 DESIGN RULES ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.09</div>
+        <div>
+          <div class="cd-step-sub">Design Principles</div>
+          <h2 class="cd-step-title">Six Standing Rules</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-num">Rule 01</div>
+          <div class="rule-title">Weight Is Authority</div>
+          <p class="rule-body">Density is a design decision. The Posse uses weight — of rule, of type, of margin — to signal institutional seriousness. Never leave a surface feeling empty. White space is not a virtue here. It is an absence that needs justification.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 02</div>
+          <div class="rule-title">Heritage as Credibility</div>
+          <p class="rule-body">Classical forms reference institutions that have lasted. Cormorant Garamond, gold rules, and circular seals say: this organization predates the news cycle. Design choices that feel contemporary undercut the positioning entirely.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 03</div>
+          <div class="rule-title">Gold Is Not Decorative</div>
+          <p class="rule-body">Antique Gold (#C9A96E) marks the boundary between content and frame. It appears at rule lines, seals, and formal dividers. Never as fill. Never as background. Gold that floods a surface loses the signal. Use it precisely.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 04</div>
+          <div class="rule-title">Cream Is a Position</div>
+          <p class="rule-body">The ivory canvas signals that this brand is not trying to be digital-first. It operates at the speed of trust, not the speed of the feed. Switching to white resets the entire register — it becomes tech, not institution.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 05</div>
+          <div class="rule-title">Maximal by Design</div>
+          <p class="rule-body">Every surface should feel considered and complete. Density signals that nothing has been omitted. A layout with generous empty passages reads as unfinished — or worse, uncertain. Fill the frame with intention.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">Rule 06</div>
+          <div class="rule-title">The Seal Closes Arguments</div>
+          <p class="rule-body">Every formal document ends with the circular mark. It functions as an official imprimatur — not a logo. It means: the Chamber has reviewed this. The standard is met. Its presence is not branding. It is certification.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.10 BRAND APPLICATIONS ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.10</div>
+        <div>
+          <div class="cd-step-sub">In Context</div>
+          <h2 class="cd-step-title">Brand Applications</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="app-grid">
+        <!-- Card 1: Social Media Post -->
+        <div class="app-card">
+          <div class="app-visual" style="background:#EDE6D8;">
+            <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" width="280" height="280">
+              <rect width="280" height="280" fill="#F5EFE0"/>
+              <!-- Triple rule at top -->
+              <rect x="24" y="24" width="232" height="3" fill="#1A1A1A"/>
+              <rect x="24" y="31" width="232" height="2" fill="#C9A96E"/>
+              <rect x="24" y="37" width="232" height="1" fill="#1A1A1A"/>
+              <!-- Headline -->
+              <text x="140" y="130" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-style="italic" font-weight="600" font-size="22" fill="#1A1A1A">The Standard</text>
+              <text x="140" y="158" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-style="italic" font-weight="600" font-size="22" fill="#1A1A1A">Has Been Set.</text>
+              <!-- Seal logo (simplified) -->
+              <circle cx="140" cy="210" r="22" stroke="#C9A96E" stroke-width="1" fill="none"/>
+              <circle cx="140" cy="210" r="18" stroke="#C9A96E" stroke-width="0.4" fill="none"/>
+              <text x="140" y="215" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="11" fill="#1A1A1A" letter-spacing="1">CCC</text>
+              <!-- URL -->
+              <text x="140" y="258" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="6" fill="#A89F91" letter-spacing="3">THECANNABISCHAMBER.COM</text>
+            </svg>
+          </div>
+          <div class="app-info">
+            <div class="app-title">Social Media Post</div>
+            <div class="app-desc">Triple-rule header, italic serif headline, seal logo, tracked URL. Institutional social presence.</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Business Card -->
+        <div class="app-card">
+          <div class="app-visual" style="background:#EDE6D8;">
+            <svg viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg" width="340" height="200">
+              <rect width="340" height="200" fill="#F5EFE0"/>
+              <!-- Triple rule at top -->
+              <rect x="0" y="0" width="340" height="3" fill="#1A1A1A"/>
+              <rect x="0" y="7" width="340" height="2" fill="#C9A96E"/>
+              <rect x="0" y="13" width="340" height="1" fill="#1A1A1A"/>
+              <!-- Seal in top-right -->
+              <circle cx="298" cy="50" r="17" stroke="#C9A96E" stroke-width="0.8" fill="none"/>
+              <circle cx="298" cy="50" r="13" stroke="#C9A96E" stroke-width="0.3" fill="none"/>
+              <text x="298" y="54" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="9" fill="#1A1A1A" letter-spacing="1">CCC</text>
+              <!-- Name -->
+              <text x="28" y="62" font-family="'EB Garamond',Georgia,serif" font-weight="500" font-size="16" fill="#1A1A1A" letter-spacing="1.5">JAMES WHITFIELD</text>
+              <!-- Title -->
+              <text x="28" y="82" font-family="'EB Garamond',Georgia,serif" font-weight="400" font-size="10" fill="#A89F91" letter-spacing="1">Director of Policy</text>
+              <!-- Gold divider -->
+              <rect x="28" y="100" width="60" height="1" fill="#C9A96E"/>
+              <!-- Contact -->
+              <text x="28" y="125" font-family="'EB Garamond',Georgia,serif" font-size="8" fill="#7A6E5C" letter-spacing="1.5">J.WHITFIELD@THECANNABISCHAMBER.COM</text>
+              <text x="28" y="140" font-family="'EB Garamond',Georgia,serif" font-size="8" fill="#7A6E5C" letter-spacing="1.5">+1 (202) 555-0140</text>
+              <text x="28" y="155" font-family="'EB Garamond',Georgia,serif" font-size="8" fill="#7A6E5C" letter-spacing="1.5">WASHINGTON, D.C.</text>
+              <!-- Bottom rule -->
+              <rect x="0" y="186" width="340" height="1" fill="#1A1A1A"/>
+              <rect x="0" y="191" width="340" height="2" fill="#C9A96E"/>
+              <rect x="0" y="197" width="340" height="3" fill="#1A1A1A"/>
+            </svg>
+          </div>
+          <div class="app-info">
+            <div class="app-title">Business Card</div>
+            <div class="app-desc">Rich, heavy, institutional. Triple rule framing, seal imprimatur, tracked serif contact details.</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Letterhead -->
+        <div class="app-card">
+          <div class="app-visual" style="background:#EDE6D8;">
+            <svg viewBox="0 0 240 340" fill="none" xmlns="http://www.w3.org/2000/svg" width="240" height="340">
+              <rect width="240" height="340" fill="#F5EFE0"/>
+              <!-- Seal centered at top -->
+              <circle cx="120" cy="44" r="22" stroke="#C9A96E" stroke-width="1" fill="none"/>
+              <circle cx="120" cy="44" r="18" stroke="#C9A96E" stroke-width="0.4" fill="none"/>
+              <text x="120" y="48" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="11" fill="#1A1A1A" letter-spacing="1">CCC</text>
+              <!-- Org name -->
+              <text x="120" y="84" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-size="7" fill="#A89F91" letter-spacing="3">THE CANNABIS CHAMBER OF COMMERCE</text>
+              <!-- Triple rule -->
+              <rect x="20" y="96" width="200" height="3" fill="#1A1A1A"/>
+              <rect x="20" y="103" width="200" height="2" fill="#C9A96E"/>
+              <rect x="20" y="109" width="200" height="1" fill="#1A1A1A"/>
+              <!-- Body text placeholder lines -->
+              <rect x="28" y="132" width="180" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="144" width="170" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="156" width="175" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="168" width="160" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="180" width="180" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="192" width="140" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="212" width="175" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="224" width="180" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="236" width="155" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="248" width="170" height="2" rx="1" fill="#D9CEBF"/>
+              <rect x="28" y="260" width="100" height="2" rx="1" fill="#D9CEBF"/>
+              <!-- Bottom triple rule -->
+              <rect x="20" y="300" width="200" height="1" fill="#1A1A1A"/>
+              <rect x="20" y="305" width="200" height="2" fill="#C9A96E"/>
+              <rect x="20" y="311" width="200" height="3" fill="#1A1A1A"/>
+            </svg>
+          </div>
+          <div class="app-info">
+            <div class="app-title">Letterhead</div>
+            <div class="app-desc">Seal masthead, tracked organization name, triple-rule framing top and bottom. Formal correspondence standard.</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Logo Coin -->
+        <div class="app-card">
+          <div class="app-visual" style="background:#EDE6D8;">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+              <defs>
+                <radialGradient id="coinGradApp" cx="38%" cy="32%" r="68%">
+                  <stop offset="0%" stop-color="#C9A96E"/>
+                  <stop offset="100%" stop-color="#8B7340"/>
+                </radialGradient>
+                <path id="topArcApp" d="M 100,100 m -68,0 a 68,68 0 1,1 136,0" />
+                <path id="bottomArcApp" d="M 100,100 m 62,0 a 62,62 0 1,1 -124,0" />
+                <filter id="coinShadowApp" x="-15%" y="-10%" width="130%" height="130%">
+                  <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+                </filter>
+              </defs>
+              <circle cx="100" cy="100" r="92" fill="url(#coinGradApp)" filter="url(#coinShadowApp)"/>
+              <circle cx="100" cy="100" r="88" stroke="rgba(255,255,255,0.18)" stroke-width="2" fill="none"/>
+              <circle cx="100" cy="100" r="78" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" fill="none"/>
+              <text font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="38" fill="rgba(255,255,255,0.88)" text-anchor="middle" x="100" y="108" letter-spacing="2">CCC</text>
+              <text font-size="7" fill="rgba(255,255,255,0.65)" letter-spacing="3" font-family="'Cormorant Garamond',Georgia,serif" font-weight="600">
+                <textPath href="#topArcApp" startOffset="50%" text-anchor="middle">THE CANNABIS CHAMBER</textPath>
+              </text>
+              <text font-size="7" fill="rgba(255,255,255,0.65)" letter-spacing="3" font-family="'Cormorant Garamond',Georgia,serif" font-weight="600">
+                <textPath href="#bottomArcApp" startOffset="50%" text-anchor="middle">OF COMMERCE</textPath>
+              </text>
+              <line x1="70" y1="120" x2="130" y2="120" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+              <text x="100" y="186" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="6" fill="rgba(255,255,255,0.4)" letter-spacing="4">EST. MMXXIII</text>
+            </svg>
+          </div>
+          <div class="app-info">
+            <div class="app-title">Logo Coin</div>
+            <div class="app-desc">Premium physical artifact. Metallic gradient, embossed seal. For wax seals, awards, certification marks.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ──────────────────────────── B2.11 EVENT FLYERS ──────────────────────────── -->
+    <div class="cd-step">
+      <div class="cd-step-header">
+        <div class="cd-step-num">B2.11</div>
+        <div>
+          <div class="cd-step-sub">In Context</div>
+          <h2 class="cd-step-title">Event Flyers</h2>
+          <div class="accent-bar"></div>
+        </div>
+      </div>
+
+      <div class="app-grid">
+        <!-- Card 1: Networking Mixer -->
+        <div class="app-card">
+          <div class="app-visual" style="background:#EDE6D8;">
+            <svg viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg" width="340" height="440">
+              <rect width="340" height="440" fill="#F5EFE0"/>
+              <!-- Triple rule at top -->
+              <rect x="24" y="20" width="292" height="3" fill="#1A1A1A"/>
+              <rect x="24" y="27" width="292" height="2" fill="#C9A96E"/>
+              <rect x="24" y="33" width="292" height="1" fill="#1A1A1A"/>
+              <!-- Org name -->
+              <text x="170" y="58" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="8" fill="#7A6E5C" letter-spacing="3">THE CANNABIS CHAMBER OF COMMERCE</text>
+              <!-- Headline: Networking -->
+              <text x="170" y="120" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-style="italic" font-weight="400" font-size="42" fill="#1A1A1A">Networking</text>
+              <!-- Headline: Mixer -->
+              <text x="170" y="170" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="54" fill="#1A1A1A">Mixer</text>
+              <!-- Gold divider -->
+              <line x1="130" y1="188" x2="210" y2="188" stroke="#C9A96E" stroke-width="1.5"/>
+              <!-- Date -->
+              <text x="170" y="216" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="14" fill="#1A1A1A" letter-spacing="1">Thursday, April 23</text>
+              <!-- Time -->
+              <text x="170" y="238" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="400" font-size="13" fill="#7A6E5C" letter-spacing="1">6:00 PM</text>
+              <!-- Circle badge seal -->
+              <circle cx="170" cy="290" r="28" stroke="#C9A96E" stroke-width="1.5" fill="none"/>
+              <circle cx="170" cy="290" r="24" stroke="#C9A96E" stroke-width="0.4" fill="none"/>
+              <circle cx="170" cy="290" r="18" stroke="#1A1A1A" stroke-width="0.3" fill="none"/>
+              <text x="170" y="297" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="20" fill="#1A1A1A">C</text>
+              <line x1="161" y1="301" x2="179" y2="301" stroke="#C9A96E" stroke-width="0.8"/>
+              <!-- Location -->
+              <text x="170" y="340" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="10" fill="#1A1A1A" letter-spacing="1.5">THE STANDARD HOTEL</text>
+              <text x="170" y="356" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="400" font-size="9" fill="#7A6E5C" letter-spacing="1">550 South Flower Street, Los Angeles</text>
+              <!-- Complimentary line -->
+              <text x="170" y="382" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-style="italic" font-weight="400" font-size="10" fill="#A89F91">Complimentary Drinks &amp; Networking</text>
+              <!-- Triple rule at bottom -->
+              <rect x="24" y="406" width="292" height="1" fill="#1A1A1A"/>
+              <rect x="24" y="411" width="292" height="2" fill="#C9A96E"/>
+              <rect x="24" y="417" width="292" height="3" fill="#1A1A1A"/>
+              <!-- URL -->
+              <text x="170" y="434" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-size="6" fill="#A89F91" letter-spacing="3">THECANNABISCHAMBER.COM</text>
+            </svg>
+          </div>
+          <div class="app-info">
+            <div class="app-title">Networking Mixer</div>
+            <div class="app-desc">Triple-rule framing, italic serif headline, circle badge seal, tracked details. Formal event invitation.</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Panel Webinar -->
+        <div class="app-card">
+          <div class="app-visual" style="background:#EDE6D8;">
+            <svg viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg" width="340" height="440">
+              <rect width="340" height="440" fill="#F5EFE0"/>
+              <!-- Triple rule at top -->
+              <rect x="24" y="20" width="292" height="3" fill="#1A1A1A"/>
+              <rect x="24" y="27" width="292" height="2" fill="#C9A96E"/>
+              <rect x="24" y="33" width="292" height="1" fill="#1A1A1A"/>
+              <!-- Tagline -->
+              <text x="170" y="56" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="8" fill="#7A6E5C" letter-spacing="3">MARKET. BRAND. RANK. RETAIN.</text>
+              <!-- Speaker headshots (placeholder rectangles) -->
+              <rect x="36" y="72" width="60" height="72" rx="2" fill="#D9CEBF" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="108" y="72" width="60" height="72" rx="2" fill="#D9CEBF" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="180" y="72" width="60" height="72" rx="2" fill="#D9CEBF" stroke="#C9A96E" stroke-width="0.8"/>
+              <rect x="252" y="72" width="60" height="72" rx="2" fill="#D9CEBF" stroke="#C9A96E" stroke-width="0.8"/>
+              <!-- Speaker names -->
+              <text x="66" y="160" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="7" fill="#1A1A1A" letter-spacing="0.5">A. MORALES</text>
+              <text x="138" y="160" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="7" fill="#1A1A1A" letter-spacing="0.5">K. OKAFOR</text>
+              <text x="210" y="160" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="7" fill="#1A1A1A" letter-spacing="0.5">R. CHEN</text>
+              <text x="282" y="160" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="7" fill="#1A1A1A" letter-spacing="0.5">J. WHITFIELD</text>
+              <!-- Gold accent line -->
+              <line x1="130" y1="178" x2="210" y2="178" stroke="#C9A96E" stroke-width="1.5"/>
+              <!-- Panel title -->
+              <text x="170" y="218" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="38" fill="#1A1A1A">Winning Strategies</text>
+              <!-- Subtitle -->
+              <text x="170" y="248" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-style="italic" font-weight="400" font-size="24" fill="#7A6E5C">with Consumers</text>
+              <!-- Circle badge seal -->
+              <circle cx="170" cy="304" r="28" stroke="#C9A96E" stroke-width="1.5" fill="none"/>
+              <circle cx="170" cy="304" r="24" stroke="#C9A96E" stroke-width="0.4" fill="none"/>
+              <circle cx="170" cy="304" r="18" stroke="#1A1A1A" stroke-width="0.3" fill="none"/>
+              <text x="170" y="311" text-anchor="middle" font-family="'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-size="20" fill="#1A1A1A">C</text>
+              <line x1="161" y1="315" x2="179" y2="315" stroke="#C9A96E" stroke-width="0.8"/>
+              <!-- Date/time -->
+              <text x="170" y="354" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="500" font-size="12" fill="#1A1A1A" letter-spacing="1.5">Wednesday, May 7</text>
+              <text x="170" y="374" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-weight="400" font-size="11" fill="#7A6E5C" letter-spacing="1">1:00 PM PT &middot; Virtual Panel</text>
+              <!-- Triple rule at bottom -->
+              <rect x="24" y="400" width="292" height="1" fill="#1A1A1A"/>
+              <rect x="24" y="405" width="292" height="2" fill="#C9A96E"/>
+              <rect x="24" y="411" width="292" height="3" fill="#1A1A1A"/>
+              <!-- URL -->
+              <text x="170" y="430" text-anchor="middle" font-family="'EB Garamond', 'Georgia', serif" font-size="6" fill="#A89F91" letter-spacing="3">THECANNABISCHAMBER.COM</text>
+            </svg>
+          </div>
+          <div class="app-info">
+            <div class="app-title">Panel Webinar</div>
+            <div class="app-desc">Speaker grid with gold borders, tracked tagline, serif panel title. Institutional thought-leadership format.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PAGE FOOTER -->
+    <footer class="page-footer">
+      <span><a href="creative-direction-crew.html">&larr; B1 The Crew</a></span>
+      <span>CCC Brand OS &middot; Direction B2</span>
+      <span><a href="creative-direction-tribe.html">B3 The Tribe &rarr;</a></span>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>

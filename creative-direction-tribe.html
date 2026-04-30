@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tribe · Creative Direction B3 · CCC Brand OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Poppins:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+:root {
+  --accent: #1B5E3B;
+  --accent-soft: rgba(27, 94, 59, 0.08);
+  --bg: #FFFFFF;
+  --dark: #111827;
+  --text: #111827;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --border-soft: #F3F4F6;
+  --ff-h: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --ff-b: 'Inter', system-ui, sans-serif;
+  --coral: #E85D4A;
+  --surface: #FAFAF5;
+}
+
+body {
+  background: var(--bg);
+}
+
+/* ===== Sidebar overrides ===== */
+aside.sidebar {
+  font-family: 'Poppins', sans-serif;
+  background: var(--surface);
+  border-right-color: var(--border);
+}
+aside.sidebar .brand-mark .wordmark {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+aside.sidebar .group-label {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+.nav-list a.active {
+  color: var(--accent);
+}
+.nav-list a.active::before {
+  background: var(--accent);
+}
+
+/* ===== Page title ===== */
+h1.page-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+h1.page-title .dot { color: var(--accent); }
+
+.page-subtitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.8vw, 19px);
+  line-height: 1.7;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+h2 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+h3 { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+/* ===== Section label ===== */
+.section-label {
+  border-top-color: var(--dark);
+}
+.cd-step-header {
+  border-top-color: var(--border);
+}
+
+/* ===== Archetype cards: clean rounded Google feel ===== */
+.archetype-grid {
+  border: none;
+  gap: 20px;
+  border-top: none;
+  border-left: none;
+}
+.archetype-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #FFFFFF;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.archetype-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+.archetype-card.primary {
+  background: var(--accent-soft);
+  border-color: rgba(27, 94, 59, 0.2);
+}
+.archetype-pct {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 800;
+}
+.archetype-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+}
+.archetype-role {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.archetype-bar {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.archetype-bar-fill {
+  border-radius: 4px;
+}
+.archetype-essence {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Archetype context quote */
+.archetype-context {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--accent);
+  margin-top: 8px;
+}
+
+/* ===== Keyword cloud: rounded pills ===== */
+.keyword {
+  border-radius: 100px;
+  font-size: 10px;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: all 0.2s ease;
+}
+.keyword.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* ===== Mood board ===== */
+.moodboard-grid {
+  columns: 3;
+  column-gap: 14px;
+}
+.mood-item {
+  margin-bottom: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.mood-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+/* ===== Slider overrides: green rounded dots ===== */
+.slider-dot {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px rgba(27, 94, 59, 0.25);
+}
+.slider-track {
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
+}
+.slider-block {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin: 0 0 20px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+.slider-section-label {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== Typography specimen ===== */
+.type-specimen {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.type-display {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.type-display .accent {
+  color: var(--accent);
+}
+.type-body-sample {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.type-detail-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+}
+.type-alphabet {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  opacity: 0.5;
+}
+.type-scale-sample {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ===== Palette ===== */
+.palette-grid {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.swatch-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+}
+.swatch-color {
+  height: 88px;
+}
+
+/* ===== Logo grid ===== */
+.logo-grid {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.logo-cell:first-child {
+  background: #FFFFFF;
+}
+
+/* ===== Signature device ===== */
+.device-showcase {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.device-hero {
+  background: #FFFFFF;
+  min-height: 240px;
+}
+.device-spec p {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== Rule cards: rounded, clean ===== */
+.rules-grid {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.rule-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.rule-card {
+  border-color: var(--border);
+  background: #FFFFFF;
+  transition: background 0.2s ease;
+}
+.rule-card:hover {
+  background: var(--accent-soft);
+}
+
+/* ===== Brand Applications grid ===== */
+.app-grid {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.app-visual {
+  background: var(--surface);
+}
+.app-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 600;
+}
+.app-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== Eyebrow / Meta ===== */
+.eyebrow {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+.meta-row {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  border-color: var(--border);
+}
+.section-number {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 9px;
+}
+.section-head .kicker {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== Footer ===== */
+footer.page-footer {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== Multi-color accent pills ===== */
+.pill-green { display: inline-block; background: rgba(27,94,59,0.1); color: var(--accent); padding: 2px 10px; border-radius: 100px; font-size: 10px; font-weight: 600; font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.04em; }
+.pill-coral { display: inline-block; background: rgba(232,93,74,0.1); color: var(--coral); padding: 2px 10px; border-radius: 100px; font-size: 10px; font-weight: 600; font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.04em; }
+
+/* ===== Hero multi-color dots decoration ===== */
+.hero-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.hero-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.hero-dots .d-green { background: var(--accent); }
+.hero-dots .d-coral { background: var(--coral); }
+
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-mark">
+      <div class="wordmark">Cannabis Chamber<br>of Commerce</div>
+      <div class="sub">Brand OS &middot; v2 &middot; 2026</div>
+    </div>
+    <div class="nav-section">
+      <div class="label">Sections</div>
+      <details class="nav-group">
+        <summary><span class="group-letter">&middot;</span><span class="group-label">Overview</span></summary>
+        <div class="nav-list"><a href="index.html">Home</a></div>
+      </details>
+      <details class="nav-group">
+        <summary><span class="group-letter">A</span><span class="group-label">Focus Star</span></summary>
+        <div class="nav-list"><a href="focus-star.html">Strategy Foundation</a></div>
+      </details>
+      <details class="nav-group" open>
+        <summary><span class="group-letter">B</span><span class="group-label">Creative Direction</span></summary>
+        <div class="nav-list">
+          <a href="creative-direction-crew.html">B1 The Crew</a>
+          <a href="creative-direction-posse.html">B2 The Posse</a>
+          <a href="creative-direction-tribe.html" class="active">B3 The Tribe</a>
+        </div>
+      </details>
+    </div>
+    <div class="toolbar-mini">
+      <div class="row"><span>Source</span><strong>source.yaml</strong></div>
+      <div class="row"><span>Updated</span><strong>2026-04-30</strong></div>
+      <div class="row"><span>Phase</span><strong>Direction Review</strong></div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- HERO -->
+    <div class="hero-dots">
+      <span class="d-green"></span>
+      <span class="d-coral"></span>
+    </div>
+    <span class="eyebrow">Section B &mdash; Brand Identity</span>
+    <h1 class="page-title">The Tribe<span class="dot">.</span></h1>
+    <p class="page-subtitle">Human. Transparent. Accessible. A trade association that looks like it belongs in any industry &mdash; because it does. Modern, colorful, clean. The most radical thing cannabis can do is stop looking like cannabis.</p>
+    <div class="meta-row">
+      <span>Direction <strong>B3 of 3</strong></span>
+      <span>Voice <span class="pill-green">Human (10)</span></span>
+      <span>Weight <span class="pill-coral">Minimal (1)</span></span>
+      <span>Reasoning <span class="pill-coral">Emotional (10)</span></span>
+      <span>Openness <span class="pill-green">Transparent (10)</span></span>
+    </div>
+
+    <!-- SECTION 1: ARCHETYPE MIX -->
+    <div class="section-label">
+      <span class="section-number">B3.01</span>
+      <div class="section-head">
+        <div class="kicker">Archetype Mix</div>
+        <h2>Through The Tribe Lens</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">The same archetype weights reinterpreted for a world where authority comes from clarity, wisdom comes from simplicity, and transformation happens when cannabis finally looks like every other modern industry.</p>
+
+    <div class="archetype-grid">
+
+      <!-- Ruler 55% -->
+      <div class="archetype-card primary">
+        <img src="assets/archetypes/Ruler.png" alt="Ruler archetype">
+        <div class="archetype-pct">55%</div>
+        <div class="archetype-name">Ruler</div>
+        <div class="archetype-role">The Accessibility Standard</div>
+        <div class="archetype-bar"><div class="archetype-bar-fill" style="width:55%"></div></div>
+        <div class="archetype-essence">The Tribe's Ruler sets standards through accessibility and clarity, not through weight or exclusion. Authority comes from making things simple enough that anyone can participate. The Chamber doesn't gatekeep through complexity. It opens doors by making the industry legible to operators, investors, and policymakers alike.</div>
+        <div class="archetype-context">"The standard is: everyone can understand this."</div>
+      </div>
+
+      <!-- Sage 30% -->
+      <div class="archetype-card">
+        <img src="assets/archetypes/Sage.png" alt="Sage archetype">
+        <div class="archetype-pct">30%</div>
+        <div class="archetype-name">Sage</div>
+        <div class="archetype-role">The Simplifier</div>
+        <div class="archetype-bar"><div class="archetype-bar-fill" style="width:30%"></div></div>
+        <div class="archetype-essence">The Sage here educates by making complex things simple. Regulation, compliance, market access, policy: none of it needs to be opaque. The Chamber's Sage takes the dense and makes it bright. Every position paper, every data release, every framework is designed so a first-time founder and a 20-year veteran get equal value from it.</div>
+        <div class="archetype-context">"If you can't explain it simply, you don't understand it well enough."</div>
+      </div>
+
+      <!-- Magician 15% -->
+      <div class="archetype-card">
+        <img src="assets/archetypes/Magician.png" alt="Magician archetype">
+        <div class="archetype-pct">15%</div>
+        <div class="archetype-name">Magician</div>
+        <div class="archetype-role">The Perception Shift</div>
+        <div class="archetype-bar"><div class="archetype-bar-fill" style="width:15%"></div></div>
+        <div class="archetype-essence">The Magician transforms perception by showing cannabis can look like any other modern industry. No special pleading, no counter-culture signaling, no "but we're different." The transformation is normalization. When an investor opens a Chamber document and it looks like something from Stripe or Notion, the argument is already won before a word is read.</div>
+        <div class="archetype-context">"The most powerful statement is looking like you belong."</div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 2: BRAND STYLE SLIDERS -->
+    <div class="section-label">
+      <span class="section-number">B3.02</span>
+      <div class="section-head">
+        <div class="kicker">Brand Style Sliders</div>
+        <h2>18 Axes Calibrated</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Each axis is a creative decision, not a description. These 18 settings define the aesthetic, tonal, and relational character of The Tribe direction in precise, comparable terms.</p>
+
+    <!-- Group 1: Brand Character -->
+    <div class="slider-block">
+      <div class="slider-section-label">Group 1 &mdash; Brand Character</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Classic</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Era</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((8 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Modern</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Mature</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Age</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((4 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Youthful</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Feminine</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Gender</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((4 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Masculine</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Playful</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Tone</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((6 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Sophisticated</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Economical</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Price Signal</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((4 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Luxurious</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Traditional</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Innovation</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((7 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Innovative</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Group 2: Voice & Relationship -->
+    <div class="slider-block">
+      <div class="slider-section-label">Group 2 &mdash; Voice &amp; Relationship</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Institutional</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Voice</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((10 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Human</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Soft</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Authority</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Hard</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Quiet</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Volume</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((2 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Talkative</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Mysterious</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Openness</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((10 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Transparent</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Group 3: Visual Language -->
+    <div class="slider-block">
+      <div class="slider-section-label">Group 3 &mdash; Visual Language</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Literal</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Abstraction</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((8 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Abstract</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Geometric</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Form</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((8 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Organic</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Minimal</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Weight</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Maximal</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Clean</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Texture</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((1 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Rich</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Muted</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Color</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((6 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Vibrant</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Group 4: Energy & Edge -->
+    <div class="slider-block">
+      <div class="slider-section-label">Group 4 &mdash; Energy &amp; Edge</div>
+      <div class="slider-grid">
+
+        <div class="slider-row">
+          <span class="slider-label">Calm</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Energy</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((4 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Energetic</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Rational</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Reasoning</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((10 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Emotional</span>
+        </div>
+
+        <div class="slider-row">
+          <span class="slider-label">Safe</span>
+          <div class="slider-wrap">
+            <span class="slider-axis-name">Edge</span>
+            <div class="slider-track">
+              <div class="slider-ticks"><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span><span class="slider-tick"></span></div>
+              <div class="slider-dot" style="left: calc((8 - 1) / 9 * 100%)"></div>
+            </div>
+          </div>
+          <span class="slider-label slider-label-r">Provocative</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 3: KEYWORD CLOUD -->
+    <div class="section-label">
+      <span class="section-number">B3.03</span>
+      <div class="section-head">
+        <div class="kicker">Brand Vocabulary</div>
+        <h2>Keyword Cloud</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:4px;">Active words define this direction's character. Inactive words are explicitly avoided. The Tribe sounds like a modern tech company that happens to work in cannabis.</p>
+
+    <div class="keyword-cloud">
+      <span class="keyword active">Modern</span>
+      <span class="keyword active">Transparent</span>
+      <span class="keyword active">Institutional</span>
+      <span class="keyword active">Clean</span>
+      <span class="keyword active">Accessible</span>
+      <span class="keyword active">Data-Driven</span>
+      <span class="keyword active">Structured</span>
+      <span class="keyword active">Warm</span>
+      <span class="keyword active">Professional</span>
+      <span class="keyword">Vibrant</span>
+      <span class="keyword">Organic</span>
+      <span class="keyword">Abstract</span>
+      <span class="keyword">Quiet</span>
+      <span class="keyword">Emotional</span>
+    </div>
+
+    <!-- SECTION 4: MOOD BOARD -->
+    <div class="section-label">
+      <span class="section-number">B3.04</span>
+      <div class="section-head">
+        <div class="kicker">Visual Reference</div>
+        <h2>Mood Board</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:4px;">Google meets Stripe meets cannabis. The visual language is clean, bright, and human-centered: white space, friendly color, people at work. The industry at its most modern.</p>
+
+    <div class="moodboard-grid">
+      <div class="mood-item">
+        <img src="assets/mood/tribe/01-community.png" alt="The People">
+        <div class="mood-label">The People</div>
+      </div>
+      <div class="mood-item">
+        <img src="assets/mood/tribe/02-leaf.png" alt="Clean Detail">
+        <div class="mood-label">Clean Detail</div>
+      </div>
+      <div class="mood-item">
+        <img src="assets/mood/tribe/03-field.png" alt="Open Space">
+        <div class="mood-label">Open Space</div>
+      </div>
+      <div class="mood-item">
+        <img src="assets/mood/tribe/04-conversation.png" alt="Peer to Peer">
+        <div class="mood-label">Peer to Peer</div>
+      </div>
+      <div class="mood-item">
+        <img src="assets/mood/tribe/05-hands.png" alt="The Work">
+        <div class="mood-label">The Work</div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: TYPOGRAPHY -->
+    <div class="section-label">
+      <span class="section-number">B3.05</span>
+      <div class="section-head">
+        <div class="kicker">Typography System</div>
+        <h2>Type Pairing</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Plus Jakarta Sans for display: geometric, confident, institutional-modern. Built for brands that need authority without coldness. Inter for body: the gold standard of clean interface text. Together they read like a modern institution, not a startup or a trade association. That is the point.</p>
+
+    <div class="type-specimen">
+      <div class="type-specimen-hero">
+        <div class="type-display">Elevating <span class="accent" style="font-weight:500;">Standards</span></div>
+        <p class="type-body-sample">The Cannabis Chamber of Commerce is built for operators who believe the industry deserves better tools, clearer information, and a professional standard that any sector would recognize.</p>
+      </div>
+
+      <div class="type-details">
+        <div class="type-detail-card">
+          <div class="type-detail-label">Display</div>
+          <div class="type-detail-name">Plus Jakarta Sans</div>
+          <div class="type-detail-weights">400 &middot; 500 &middot; 600 &middot; 700 &middot; 800<br>Geometric sans-serif.<br>Confident, institutional, modern at every scale.</div>
+        </div>
+        <div class="type-detail-card" style="border-right:none;">
+          <div class="type-detail-label">Body</div>
+          <div class="type-detail-name" style="font-family:'Inter',sans-serif; font-weight:600;">Inter</div>
+          <div class="type-detail-weights">300 &middot; 400 &middot; 500 &middot; 600<br>The UI text standard.<br>Readable, neutral, professional.</div>
+        </div>
+      </div>
+
+      <div class="type-alphabet">
+        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      </div>
+
+      <div class="type-scale">
+        <div class="type-scale-row">
+          <span class="type-scale-label">Display / 72px</span>
+          <span class="type-scale-sample" style="font-size:56px; font-weight:800; line-height:1;">Standards</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-label">H1 / 48px</span>
+          <span class="type-scale-sample" style="font-size:40px; font-weight:700; line-height:1.05;">Elevating Business</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-label">H2 / 32px</span>
+          <span class="type-scale-sample" style="font-size:28px; font-weight:600; line-height:1.1;">The operator's association</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-label">H3 / 22px</span>
+          <span class="type-scale-sample" style="font-size:20px; font-weight:600; line-height:1.2;">A B2B institution built on trust</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-label">Body / 15px</span>
+          <span class="type-scale-sample" style="font-family:'Inter',sans-serif; font-size:15px; font-weight:400; line-height:1.7; color:var(--muted);">The Chamber exists to raise the standard of operating in the global cannabis and hemp industry through advocacy, access, and the collective credibility of its members.</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-label">Caption / 10px</span>
+          <span class="type-scale-sample" style="font-family:'Inter',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); line-height:1.6;">Elevating Business Standards &middot; Global B2B Cannabis &amp; Hemp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6: COLOR PALETTE -->
+    <div class="section-label">
+      <span class="section-number">B3.06</span>
+      <div class="section-head">
+        <div class="kicker">Color System</div>
+        <h2>The Palette</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Seven colors. Each has a job. Dark green grounds the institution. Coral provides warmth and signal energy. The palette says: no haze, just business. Every boardroom, pitch deck, and policy brief.</p>
+
+    <div class="palette-grid">
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#1B5E3B;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Forest Green</div>
+          <div class="swatch-hex">#1B5E3B</div>
+          <div class="swatch-use">Primary accent. Institutional green.</div>
+        </div>
+      </div>
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#E85D4A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Coral</div>
+          <div class="swatch-hex">#E85D4A</div>
+          <div class="swatch-use">Signal color. Warm energy.</div>
+        </div>
+      </div>
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#111827;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Midnight</div>
+          <div class="swatch-hex">#111827</div>
+          <div class="swatch-use">Primary dark. Authority.</div>
+        </div>
+      </div>
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#FFFFFF; border:1px solid var(--border);"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">White</div>
+          <div class="swatch-hex">#FFFFFF</div>
+          <div class="swatch-use">Canvas. Clean space.</div>
+        </div>
+      </div>
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#FAFAF5; border:1px solid var(--border);"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Warm Cream</div>
+          <div class="swatch-hex">#FAFAF5</div>
+          <div class="swatch-use">Surface. Card backgrounds.</div>
+        </div>
+      </div>
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#6B8F71;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Sage</div>
+          <div class="swatch-hex">#6B8F71</div>
+          <div class="swatch-use">Tertiary. Supporting green.</div>
+        </div>
+      </div>
+
+      <div class="palette-swatch">
+        <div class="swatch-color" style="background:#9CA3AF;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Warm Gray</div>
+          <div class="swatch-hex">#9CA3AF</div>
+          <div class="swatch-use">Metadata. Captions.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 7: LOGO EXPLORATION -->
+    <div class="section-label">
+      <span class="section-number">B3.07</span>
+      <div class="section-head">
+        <div class="kicker">Logo Exploration</div>
+        <h2>Mark Concepts</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Three circle-badge concepts. The C-with-leaf-notch mark inside a chamber seal. Institutional, clean, instantly recognizable at any scale. The coral accent dot signals growth without cliche.</p>
+
+    <div class="logo-grid">
+
+      <!-- Cell 1: Primary Badge (white bg) -->
+      <div class="logo-cell">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="92" stroke="#1B5E3B" stroke-width="2.5" fill="none"/>
+          <circle cx="100" cy="100" r="86" stroke="#111827" stroke-width="0.5" fill="none"/>
+          <defs>
+            <path id="topArcT1" d="M 26,100 A 74,74 0 0,1 174,100"/>
+            <path id="bottomArcT1" d="M 26,100 A 74,74 0 0,0 174,100"/>
+          </defs>
+          <text font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="9.5" fill="#111827" letter-spacing="3.5">
+            <textPath href="#topArcT1" startOffset="50%" text-anchor="middle">THE CANNABIS</textPath>
+          </text>
+          <text font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="8" fill="#111827" letter-spacing="2.5">
+            <textPath href="#bottomArcT1" startOffset="50%" text-anchor="middle">CHAMBER OF COMMERCE</textPath>
+          </text>
+          <circle cx="26" cy="100" r="2" fill="#1B5E3B"/>
+          <circle cx="174" cy="100" r="2" fill="#1B5E3B"/>
+          <!-- Central C with leaf notch -->
+          <path d="M 118,74 A 33,33 0 1,0 118,126" stroke="#111827" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="124" cy="74" r="4.5" fill="#E85D4A"/>
+        </svg>
+        <span class="logo-cell-label">Primary Badge</span>
+      </div>
+
+      <!-- Cell 2: Dark Badge -->
+      <div class="logo-cell dark-cell" style="background:#111827;">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="92" stroke="#1B5E3B" stroke-width="2.5" fill="none"/>
+          <circle cx="100" cy="100" r="86" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="none"/>
+          <defs>
+            <path id="topArcT2" d="M 26,100 A 74,74 0 0,1 174,100"/>
+            <path id="bottomArcT2" d="M 26,100 A 74,74 0 0,0 174,100"/>
+          </defs>
+          <text font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="9.5" fill="#FAFAF5" letter-spacing="3.5">
+            <textPath href="#topArcT2" startOffset="50%" text-anchor="middle">THE CANNABIS</textPath>
+          </text>
+          <text font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="8" fill="#FAFAF5" letter-spacing="2.5">
+            <textPath href="#bottomArcT2" startOffset="50%" text-anchor="middle">CHAMBER OF COMMERCE</textPath>
+          </text>
+          <circle cx="26" cy="100" r="2" fill="#1B5E3B"/>
+          <circle cx="174" cy="100" r="2" fill="#1B5E3B"/>
+          <!-- Central C with leaf notch -->
+          <path d="M 118,74 A 33,33 0 1,0 118,126" stroke="#FAFAF5" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="124" cy="74" r="4.5" fill="#E85D4A"/>
+        </svg>
+        <span class="logo-cell-label" style="color:rgba(255,255,255,0.35);">Dark Badge</span>
+      </div>
+
+      <!-- Cell 3: Simplified Coin -->
+      <div class="logo-cell" style="background:var(--surface);">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="92" stroke="#1B5E3B" stroke-width="2" fill="none"/>
+          <path d="M 123,67 A 43,43 0 1,0 123,133" stroke="#111827" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <circle cx="129" cy="67" r="5.5" fill="#E85D4A"/>
+        </svg>
+        <span class="logo-cell-label">Simplified Coin</span>
+      </div>
+
+    </div>
+
+    <!-- SECTION 8: SIGNATURE DEVICE -->
+    <div class="section-label">
+      <span class="section-number">B3.08</span>
+      <div class="section-head">
+        <div class="kicker">Signature Device</div>
+        <h2>The Color Bar</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Three thin horizontal lines in green, coral, and dark. A closing mark that grounds every surface with institutional weight. Clean, warm, modern. It appears once per surface as the Chamber's signature.</p>
+
+    <div class="device-showcase">
+      <div class="device-hero">
+        <div style="background:#FFFFFF; width:100%; padding:56px 64px; display:flex; flex-direction:column; align-items:center; gap:20px; min-height:220px; justify-content:center;">
+          <!-- Color bar system -->
+          <div style="display:flex; flex-direction:column; gap:3px; width:40%; align-items:center;">
+            <div style="width:100%; height:2px; background:#1B5E3B; border-radius:2px;"></div>
+            <div style="width:100%; height:2px; background:#E85D4A; border-radius:2px;"></div>
+            <div style="width:100%; height:2px; background:#111827; border-radius:2px;"></div>
+          </div>
+          <div style="font-family:'Inter',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.35em; text-transform:uppercase; color:#6B7280; text-align:center; margin-top:8px;">The Cannabis Chamber of Commerce</div>
+        </div>
+      </div>
+      <div class="device-specs">
+        <div class="device-spec">
+          <div class="device-spec-label">The Color Bar</div>
+          <p>Three horizontal rules: Forest Green (#1B5E3B), Coral (#E85D4A), Midnight (#111827). Each 2px height, stacked with 3px gaps. Spans 40% of container width, centered. Border-radius 2px on each line. The three-color system anchors the institutional palette across every surface.</p>
+        </div>
+        <div class="device-spec" style="border-right:none;">
+          <div class="device-spec-label">Application</div>
+          <p>Footer of digital pages, bottom of print documents, closing slide of presentations. Always centered. Always followed by the Chamber name in Inter 500 at 9px, tracked wide. This is the closing mark. It replaces traditional rules, borders, and seals with something that says: we are a modern institution.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 9: DESIGN RULES -->
+    <div class="section-label">
+      <span class="section-number">B3.09</span>
+      <div class="section-head">
+        <div class="kicker">Creative Principles</div>
+        <h2>Design Rules</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Six rules that separate The Tribe from the other two directions. These are commitments, not preferences. Break them and the direction becomes something else entirely.</p>
+
+    <div class="rules-grid">
+
+      <div class="rule-card">
+        <div class="rule-num">B3.09.01</div>
+        <div class="rule-title">Clarity is the Standard</div>
+        <div class="rule-body">Make complex things simple. If an operator can't understand it in 5 seconds, redesign. Regulation, compliance, market data, policy positions: none of it earns the right to be opaque. The Chamber's value is legibility. Every surface is a test of whether the industry can communicate like a modern one.</div>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-num">B3.09.02</div>
+        <div class="rule-title">Two Colors, Full Range</div>
+        <div class="rule-body">Green is institution. Coral is signal. Never decorative. Every color choice in The Tribe direction carries intention. The two-color system is not about restraint for its own sake. It is a functional language where green grounds and coral activates, making information instantly scannable and emotionally clear.</div>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-num">B3.09.03</div>
+        <div class="rule-title">Accessible by Default</div>
+        <div class="rule-body">Every surface, every message, every interaction designed for the widest possible audience. No gatekeeping through complexity. No jargon walls. No insider language that makes a first-time founder feel like they arrived late. The Tribe's Ruler sets the standard through inclusion, not exclusion.</div>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-num">B3.09.04</div>
+        <div class="rule-title">White Space is Confidence</div>
+        <div class="rule-body">Minimal weight, maximum impact. The Tribe doesn't fill space to prove it belongs. It leaves room because it knows it does. Every page, every document, every slide should feel like it could breathe further. Density is the opposite of authority in this direction.</div>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-num">B3.09.05</div>
+        <div class="rule-title">Human at Every Scale</div>
+        <div class="rule-body">From the favicon to the billboard, this should feel like it was made by people who care. Not a committee. Not a design system on autopilot. The rounded corners, the friendly type, the warm green: every detail is a decision to treat the audience as a person, not a target demographic.</div>
+      </div>
+
+      <div class="rule-card">
+        <div class="rule-num">B3.09.06</div>
+        <div class="rule-title">The Quiet Provocation</div>
+        <div class="rule-body">Edge (8) without volume (2). The most radical thing in cannabis is looking like you belong in any industry. No counter-culture signaling. No special pleading. The Tribe's provocation is normalization itself. When the Chamber's materials look like they came from Stripe or Google, the argument about legitimacy is already over.</div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 10: BRAND APPLICATIONS -->
+    <div class="section-label">
+      <span class="section-number">B3.10</span>
+      <div class="section-head">
+        <div class="kicker">In Context</div>
+        <h2>Brand Applications</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Four applications showing the direction in use. Each demonstrates the green-coral-dark system, clean geometry, and institutional confidence that define The Tribe at production scale.</p>
+
+    <div class="app-grid">
+
+      <!-- Card 1: Social Media Post -->
+      <div class="app-card">
+        <div class="app-visual">
+          <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="280" height="280" rx="12" fill="#FFFFFF"/>
+            <rect x="1" y="1" width="278" height="278" rx="11" stroke="#F3F4F6" stroke-width="2"/>
+            <!-- Circle badge mark -->
+            <circle cx="35" cy="34" r="14" stroke="#1B5E3B" stroke-width="1.5" fill="none"/>
+            <path d="M 40,27 A 8,8 0 1,0 40,41" stroke="#111827" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="42" cy="27" r="2" fill="#E85D4A"/>
+            <!-- Headline -->
+            <text x="24" y="100" font-family="'Plus Jakarta Sans',system-ui,sans-serif" font-weight="600" font-size="20" fill="#111827">Join 2,400 operators</text>
+            <text x="24" y="126" font-family="'Plus Jakarta Sans',system-ui,sans-serif" font-weight="600" font-size="20" fill="#111827">raising the standard.</text>
+            <!-- Bullet items with colored dots -->
+            <circle cx="32" cy="162" r="4" fill="#1B5E3B"/>
+            <text x="44" y="166" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#6B7280" font-weight="400">Market access &amp; intelligence</text>
+            <circle cx="32" cy="186" r="4" fill="#1B5E3B"/>
+            <text x="44" y="190" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#6B7280" font-weight="400">Policy advocacy &amp; compliance</text>
+            <circle cx="32" cy="210" r="4" fill="#E85D4A"/>
+            <text x="44" y="214" font-family="'Inter',system-ui,sans-serif" font-size="11" fill="#6B7280" font-weight="400">Global B2B network</text>
+            <!-- URL -->
+            <text x="24" y="256" font-family="'Inter',system-ui,sans-serif" font-size="10" fill="#1B5E3B" font-weight="500" letter-spacing="0.5">thecannabischamber.com</text>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Social Media Post</div>
+          <div class="app-desc">Membership recruitment. Circle badge branding with green-coral bullet system. Clean, scannable, institutional.</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Business Card -->
+      <div class="app-card">
+        <div class="app-visual">
+          <svg viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="340" height="200" rx="10" fill="#FFFFFF"/>
+            <rect x="1" y="1" width="338" height="198" rx="9" stroke="#E5E7EB" stroke-width="1"/>
+            <!-- Circle badge logo -->
+            <circle cx="42" cy="38" r="16" stroke="#1B5E3B" stroke-width="1.5" fill="none"/>
+            <path d="M 48,30 A 10,10 0 1,0 48,46" stroke="#111827" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="30" r="2.5" fill="#E85D4A"/>
+            <!-- Name -->
+            <text x="30" y="100" font-family="'Plus Jakarta Sans',system-ui,sans-serif" font-weight="600" font-size="16" fill="#111827" letter-spacing="1">MAYA RODRIGUEZ</text>
+            <!-- Title -->
+            <text x="30" y="120" font-family="'Inter',system-ui,sans-serif" font-weight="400" font-size="11" fill="#6B7280">Head of Community</text>
+            <!-- Email -->
+            <text x="30" y="140" font-family="'Inter',system-ui,sans-serif" font-weight="400" font-size="9" fill="#6B7280">maya@thecannabischamber.com</text>
+            <!-- Color bar signature at bottom -->
+            <rect x="110" y="172" width="120" height="2" rx="1" fill="#1B5E3B"/>
+            <rect x="110" y="177" width="120" height="2" rx="1" fill="#E85D4A"/>
+            <rect x="110" y="182" width="120" height="2" rx="1" fill="#111827"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Business Card</div>
+          <div class="app-desc">Front face. Circle badge logo, Plus Jakarta Sans headings, color bar signature. Clean white with rounded corners.</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Letterhead -->
+      <div class="app-card">
+        <div class="app-visual">
+          <svg viewBox="0 0 240 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="240" height="340" rx="4" fill="#FFFFFF"/>
+            <rect x="1" y="1" width="238" height="338" rx="3" stroke="#E5E7EB" stroke-width="1"/>
+            <!-- Circle badge logo centered -->
+            <circle cx="120" cy="34" r="14" stroke="#1B5E3B" stroke-width="1.5" fill="none"/>
+            <path d="M 126,26 A 10,10 0 1,0 126,42" stroke="#111827" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="128" cy="26" r="2" fill="#E85D4A"/>
+            <!-- Chamber name -->
+            <text x="120" y="68" text-anchor="middle" font-family="'Inter',system-ui,sans-serif" font-size="6.5" fill="#6B7280" font-weight="500" letter-spacing="3">THE CANNABIS CHAMBER OF COMMERCE</text>
+            <!-- Rule -->
+            <rect x="30" y="82" width="180" height="1" fill="#E5E7EB"/>
+            <!-- Body text placeholder lines -->
+            <rect x="30" y="110" width="170" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="122" width="155" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="134" width="165" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="146" width="140" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="166" width="170" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="178" width="160" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="190" width="148" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="210" width="165" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="222" width="155" height="4" rx="2" fill="#F3F4F6"/>
+            <rect x="30" y="234" width="100" height="4" rx="2" fill="#F3F4F6"/>
+            <!-- Color bar signature at bottom -->
+            <rect x="80" y="306" width="80" height="2" rx="1" fill="#1B5E3B"/>
+            <rect x="80" y="311" width="80" height="2" rx="1" fill="#E85D4A"/>
+            <rect x="80" y="316" width="80" height="2" rx="1" fill="#111827"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Letterhead</div>
+          <div class="app-desc">Portrait format. Centered circle badge, tracked Chamber name, color bar signature at base.</div>
+        </div>
+      </div>
+
+      <!-- Card 4: Logo Coin -->
+      <div class="app-card">
+        <div class="app-visual">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Subtle shadow circle -->
+            <circle cx="102" cy="104" r="75" fill="#000" opacity="0.04"/>
+            <!-- White coin -->
+            <circle cx="100" cy="100" r="75" fill="#FFFFFF" stroke="#1B5E3B" stroke-width="2"/>
+            <!-- Central C with leaf notch -->
+            <path d="M 118,74 A 32,32 0 1,0 118,126" stroke="#111827" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="123" cy="74" r="5" fill="#E85D4A"/>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Logo Coin</div>
+          <div class="app-desc">Favicon, app icon, social avatar, challenge coin. The C mark at its most reduced.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 11: EVENT FLYERS -->
+    <div class="section-label">
+      <span class="section-number">B3.11</span>
+      <div class="section-head">
+        <div class="kicker">In Context</div>
+        <h2>Event Flyers</h2>
+      </div>
+    </div>
+    <p style="max-width:580px; font-family:'Inter',sans-serif; font-size:13.5px; color:var(--muted); line-height:1.7; margin-bottom:28px;">Two event flyer mockups showing the brand system in action. The green-coral-dark palette, Plus Jakarta Sans typography, and circle badge work together at promotional scale.</p>
+
+    <div class="app-grid">
+
+      <!-- Card 1: Networking Mixer -->
+      <div class="app-card">
+        <div class="app-visual">
+          <svg viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="340" height="440" rx="4" fill="#FFFFFF"/>
+            <rect x="1" y="1" width="338" height="438" rx="3" stroke="#E5E7EB" stroke-width="1"/>
+            <!-- Green header block -->
+            <rect x="0" y="0" width="340" height="100" rx="4" fill="#1B5E3B"/>
+            <rect x="0" y="10" width="340" height="90" fill="#1B5E3B"/>
+            <text x="170" y="38" text-anchor="middle" font-family="'Inter',sans-serif" font-size="6.5" fill="rgba(255,255,255,0.7)" font-weight="500" letter-spacing="3">THE CANNABIS CHAMBER OF COMMERCE</text>
+            <text x="170" y="72" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="32" fill="#FFFFFF" font-weight="700">NETWORKING</text>
+            <!-- Coral large text -->
+            <text x="24" y="148" font-family="'Plus Jakarta Sans',sans-serif" font-size="48" fill="#E85D4A" font-weight="700">Mixer.</text>
+            <!-- Date block -->
+            <text x="24" y="190" font-family="'Inter',sans-serif" font-size="12" fill="#6B7280" font-weight="400">Thursday</text>
+            <text x="24" y="224" font-family="'Plus Jakarta Sans',sans-serif" font-size="36" fill="#111827" font-weight="700">04/23</text>
+            <text x="142" y="224" font-family="'Inter',sans-serif" font-size="14" fill="#6B7280" font-weight="400">6:00 PM</text>
+            <!-- Small circle badge -->
+            <circle cx="290" cy="180" r="24" stroke="#1B5E3B" stroke-width="1.5" fill="none"/>
+            <path d="M 296,172 A 12,12 0 1,0 296,188" stroke="#111827" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="298" cy="172" r="2.5" fill="#E85D4A"/>
+            <!-- Location -->
+            <text x="24" y="268" font-family="'Inter',sans-serif" font-size="11" fill="#111827" font-weight="500">The Standard Hotel, Downtown LA</text>
+            <text x="24" y="286" font-family="'Inter',sans-serif" font-size="10" fill="#6B7280" font-weight="400">550 S Flower St, Los Angeles, CA 90071</text>
+            <!-- Complimentary line -->
+            <text x="24" y="320" font-family="'Inter',sans-serif" font-size="10" fill="#6B7280" font-weight="400" font-style="italic">Complimentary Drinks &amp; Networking</text>
+            <!-- Three-color bar at bottom -->
+            <rect x="0" y="420" width="113" height="2" fill="#1B5E3B"/>
+            <rect x="113" y="420" width="114" height="2" fill="#E85D4A"/>
+            <rect x="227" y="420" width="113" height="2" fill="#111827"/>
+            <!-- URL -->
+            <text x="170" y="410" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#1B5E3B" font-weight="500" letter-spacing="1">thecannabischamber.com</text>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Networking Mixer</div>
+          <div class="app-desc">Event flyer. Green header block, coral display type, circle badge, three-color bar signature. Clean and direct.</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Panel Webinar -->
+      <div class="app-card">
+        <div class="app-visual">
+          <svg viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="340" height="440" rx="4" fill="#1B5E3B"/>
+            <!-- Coral tracked text -->
+            <text x="24" y="38" font-family="'Inter',sans-serif" font-size="8" fill="#E85D4A" font-weight="600" letter-spacing="3">MARKET. BRAND. RANK. RETAIN.</text>
+            <!-- 4 speaker placeholder boxes -->
+            <rect x="24" y="56" width="68" height="68" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="100" y="56" width="68" height="68" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="176" y="56" width="68" height="68" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <rect x="252" y="56" width="68" height="68" rx="4" fill="rgba(255,255,255,0.1)"/>
+            <!-- Speaker names -->
+            <text x="58" y="140" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" fill="rgba(255,255,255,0.7)" font-weight="400">J. Martinez</text>
+            <text x="134" y="140" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" fill="rgba(255,255,255,0.7)" font-weight="400">S. Chen</text>
+            <text x="210" y="140" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" fill="rgba(255,255,255,0.7)" font-weight="400">R. Okafor</text>
+            <text x="286" y="140" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" fill="rgba(255,255,255,0.7)" font-weight="400">L. Nguyen</text>
+            <!-- Large title -->
+            <text x="24" y="200" font-family="'Plus Jakarta Sans',sans-serif" font-size="48" fill="#FFFFFF" font-weight="700">Winning</text>
+            <text x="24" y="252" font-family="'Plus Jakarta Sans',sans-serif" font-size="48" fill="#FFFFFF" font-weight="700">Strategies.</text>
+            <text x="24" y="282" font-family="'Plus Jakarta Sans',sans-serif" font-size="22" fill="#E85D4A" font-weight="500">with Consumers</text>
+            <!-- Circle badge -->
+            <circle cx="296" cy="270" r="20" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+            <path d="M 302,262 A 10,10 0 1,0 302,278" stroke="#FAFAF5" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="304" cy="262" r="2" fill="#E85D4A"/>
+            <!-- Date/time -->
+            <text x="24" y="330" font-family="'Inter',sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" font-weight="400">Wednesday, May 14 &middot; 12:00 PM PT</text>
+            <text x="24" y="350" font-family="'Inter',sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" font-weight="400">Live Webinar &middot; Free for Members</text>
+            <!-- Coral bar at bottom -->
+            <rect x="0" y="420" width="340" height="3" fill="#E85D4A"/>
+            <!-- URL -->
+            <text x="170" y="408" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" font-weight="500" letter-spacing="1">thecannabischamber.com</text>
+          </svg>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Panel Webinar</div>
+          <div class="app-desc">Webinar flyer. Dark green background, coral accents, speaker grid, circle badge. Authority at event scale.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="page-footer">
+      <span><a href="creative-direction-posse.html">&larr; B2 The Posse</a></span>
+      <span>CCC Brand OS &middot; Direction B3</span>
+      <span><a href="index.html">Home &rarr;</a></span>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>

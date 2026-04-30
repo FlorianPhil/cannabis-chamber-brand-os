@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCC Brand OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* Index-specific overrides */
+.hub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 2px solid var(--text);
+  border-left: 1px solid var(--border);
+  margin: 24px 0 52px;
+}
+@media (max-width: 800px) { .hub-grid { grid-template-columns: 1fr; } }
+
+.hub-card {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 28px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: background 0.25s;
+  text-decoration: none;
+  color: inherit;
+}
+.hub-card:hover { background: var(--accent-soft); }
+.hub-card:hover .hub-arrow { color: var(--accent); }
+
+.hub-section-tag {
+  font-family: var(--ff-b);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.hub-card-title {
+  font-family: var(--ff-h);
+  font-weight: 800;
+  font-size: clamp(20px, 2.5vw, 28px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--text);
+}
+.hub-card-desc {
+  font-family: var(--ff-b);
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 4px;
+  flex: 1;
+}
+.hub-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ff-b);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  margin-top: 12px;
+  align-self: flex-start;
+}
+.hub-status.complete { background: var(--accent-soft); color: var(--accent); }
+.hub-status.review { background: rgba(234, 179, 8, 0.10); color: #B45309; }
+.hub-status.pending { background: var(--border-soft); color: var(--muted); }
+
+.hub-arrow {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  font-size: 20px;
+  color: var(--border);
+  transition: color 0.25s;
+}
+
+/* Direction preview chips */
+.direction-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.dir-chip {
+  font-family: var(--ff-b);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.dir-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Promise banner */
+.promise-banner {
+  background: var(--dark);
+  padding: 40px 44px;
+  margin: 0 0 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.promise-label {
+  font-family: var(--ff-b);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.promise-text {
+  font-family: var(--ff-h);
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 52px);
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+  color: #fff;
+}
+
+/* Phase indicator */
+.phase-strip {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  margin: 0 0 52px;
+  overflow: hidden;
+}
+.phase-step {
+  flex: 1;
+  padding: 14px 16px;
+  border-right: 1px solid var(--border);
+  font-family: var(--ff-b);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+.phase-step:last-child { border-right: none; }
+.phase-step.done { color: var(--accent); }
+.phase-step.done::before { content: '✓ '; font-weight: 700; }
+.phase-step.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+.phase-step.active::before { content: '→ '; }
+</style>
+</head>
+<body>
+<div class="shell">
+
+<aside class="sidebar">
+  <div class="brand-mark">
+    <div class="wordmark">Cannabis Chamber<br>of Commerce</div>
+    <div class="sub">Brand OS &middot; v2 &middot; 2026</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="label">Sections</div>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">&middot;</span><span class="group-label">Overview</span></summary>
+      <div class="nav-list"><a href="index.html" class="active">Home</a></div>
+    </details>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">A</span><span class="group-label">Focus Star</span></summary>
+      <div class="nav-list">
+        <a href="focus-star.html">Strategy Foundation</a>
+      </div>
+    </details>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">B</span><span class="group-label">Creative Direction</span></summary>
+      <div class="nav-list">
+        <a href="creative-direction-crew.html">B1 The Crew</a>
+        <a href="creative-direction-posse.html">B2 The Posse</a>
+        <a href="creative-direction-tribe.html">B3 The Tribe</a>
+      </div>
+    </details>
+  </div>
+
+  <div class="toolbar-mini">
+    <div class="row"><span>Source</span><strong>source.yaml</strong></div>
+    <div class="row"><span>Updated</span><strong>2026-04-30</strong></div>
+    <div class="row"><span>Phase</span><strong>Direction Review</strong></div>
+    <div class="row"><span>Built by</span><strong>Brand Therapy</strong></div>
+  </div>
+</aside>
+
+<main class="content">
+
+  <span class="eyebrow">Cannabis Chamber of Commerce &middot; Brand OS</span>
+  <h1 class="page-title">Brand OS<span class="dot">.</span></h1>
+  <p class="page-subtitle">The strategic and creative foundation for the Chamber's rebrand. Source of truth for all brand decisions downstream.</p>
+
+  <div class="meta-row">
+    <span><strong>Entity</strong> Nonprofit Trade Association</span>
+    <span><strong>Scope</strong> Global B2B Cannabis &amp; Hemp</span>
+    <span><strong>Spectrum</strong> Institutional (5/5)</span>
+    <span><strong>Archetype</strong> Ruler 55 · Sage 30 · Magician 15</span>
+  </div>
+
+  <!-- Promise banner -->
+  <div class="promise-banner">
+    <div class="promise-label">Promise Word</div>
+    <div class="promise-text">Elevating<br>Business Standards</div>
+  </div>
+
+  <!-- Phase strip -->
+  <div class="phase-strip">
+    <div class="phase-step done">Brand Therapy</div>
+    <div class="phase-step done">Strategy (Section A)</div>
+    <div class="phase-step active">Direction Review (Section B)</div>
+    <div class="phase-step pending">Identity Decision</div>
+    <div class="phase-step pending">System Build</div>
+  </div>
+
+  <!-- Hub grid -->
+  <div class="section-label">
+    <div class="section-number">—</div>
+    <div class="section-head">
+      <div class="kicker">All Sections</div>
+      <h2>Contents</h2>
+    </div>
+  </div>
+
+  <div class="hub-grid">
+
+    <a class="hub-card" href="focus-star.html">
+      <div class="hub-arrow">&rarr;</div>
+      <div class="hub-section-tag">Section A</div>
+      <div class="hub-card-title">Focus Star</div>
+      <div class="hub-card-desc">The five strategic edges: Promise, Audience, Purpose, Personality, Offering. Plus archetype mix, audience definition, and membership tier structure.</div>
+      <div class="hub-status complete">Complete</div>
+    </a>
+
+    <div class="hub-card" style="cursor:default;">
+      <div class="hub-section-tag">Section B</div>
+      <div class="hub-card-title">Creative Direction</div>
+      <div class="hub-card-desc">Three visual identity explorations — each a fully realized aesthetic world built from the brand style sliders. Review and select one direction to advance.</div>
+      <div class="hub-status review">Under Review</div>
+      <div class="direction-chips">
+        <a class="dir-chip" href="creative-direction-crew.html">B1 The Crew</a>
+        <a class="dir-chip" href="creative-direction-posse.html">B2 The Posse</a>
+        <a class="dir-chip" href="creative-direction-tribe.html">B3 The Tribe</a>
+      </div>
+    </div>
+
+    <a class="hub-card" href="creative-direction-crew.html">
+      <div class="hub-arrow">&rarr;</div>
+      <div class="hub-section-tag">Section B1</div>
+      <div class="hub-card-title">The Crew</div>
+      <div class="hub-card-desc">Acid green on white. Syne + DM Sans. Electric, modern, unapologetic. High-contrast operator identity with geometric authority.</div>
+      <div class="hub-status review">Under Review</div>
+    </a>
+
+    <a class="hub-card" href="creative-direction-posse.html">
+      <div class="hub-arrow">&rarr;</div>
+      <div class="hub-section-tag">Section B2</div>
+      <div class="hub-card-title">The Posse</div>
+      <div class="hub-card-desc">Antique gold on ivory cream. Cormorant Garamond throughout. Classical, luxurious, institutional weight. The historical Chamber aesthetic.</div>
+      <div class="hub-status review">Under Review</div>
+    </a>
+
+    <a class="hub-card" href="creative-direction-tribe.html">
+      <div class="hub-arrow">&rarr;</div>
+      <div class="hub-section-tag">Section B3</div>
+      <div class="hub-card-title">The Tribe</div>
+      <div class="hub-card-desc">Sage green on warm off-white. Fraunces + Plus Jakarta Sans. Human, organic, radically transparent. Authority earned through proximity, not declaration.</div>
+      <div class="hub-status review">Under Review</div>
+    </a>
+
+    <div class="hub-card" style="cursor:default; opacity:0.5;">
+      <div class="hub-section-tag">Sections C &ndash; E</div>
+      <div class="hub-card-title">System Build</div>
+      <div class="hub-card-desc">Voice rules, typography system, photography direction, application patterns, and signature device — all downstream outputs of the selected creative direction.</div>
+      <div class="hub-status pending">Not Started</div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer">
+    <span>Cannabis Chamber of Commerce &middot; Brand OS</span>
+    <span>Built with Brand Therapy &middot; FP Consulting</span>
+    <span><a href="focus-star.html">Section A &rarr;</a></span>
+  </footer>
+
+</main>
+</div>
+</body>
+</html>
