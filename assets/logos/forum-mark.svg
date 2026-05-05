@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">The Forum mark</title>
+  <desc id="desc">A circular forum table with a shared center.</desc>
+  <g fill="none" stroke="#151A1F" stroke-width="28">
+    <circle cx="128" cy="128" r="82"/>
+    <path d="M64 128h128"/>
+    <path d="M128 64v128"/>
+  </g>
+  <circle cx="128" cy="128" r="20" fill="#151A1F"/>
+</svg>

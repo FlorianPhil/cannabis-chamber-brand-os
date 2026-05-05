@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 168" role="img" aria-labelledby="title desc">
+  <title id="title">The Aperture primary logo</title>
+  <desc id="desc">Cannabis Chamber wordmark with three-part aperture mark.</desc>
+  <path fill="#0B1114" fill-rule="evenodd" d="M84 16a68 68 0 0 1 54 26l-20 14a43 43 0 0 0-68 0L30 42a68 68 0 0 1 54-26Zm64 58a68 68 0 0 1-41 68l-9-24a43 43 0 0 0 26-42ZM61 142a68 68 0 0 1-41-68l25 2a43 43 0 0 0 26 42Z"/>
+  <g fill="#0B1114">
+    <text x="166" y="63" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">CANNABIS</text>
+    <text x="166" y="101" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700">CHAMBER</text>
+    <text x="168" y="131" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">OF COMMERCE</text>
+  </g>
+</svg>

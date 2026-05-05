@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">The Aperture mark</title>
+  <desc id="desc">Three geometric aperture forms opening around the center.</desc>
+  <path fill="#0B1114" fill-rule="evenodd" d="M128 24a104 104 0 0 1 82 40l-31 22a66 66 0 0 0-102 0L46 64a104 104 0 0 1 82-40Zm98 88a104 104 0 0 1-62 104l-14-36a66 66 0 0 0 39-64Zm-134 104A104 104 0 0 1 30 112l37 4a66 66 0 0 0 39 64Z"/>
+</svg>

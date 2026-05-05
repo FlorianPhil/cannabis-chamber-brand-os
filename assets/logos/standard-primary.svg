@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 168" role="img" aria-labelledby="title desc">
+  <title id="title">The Standard primary logo</title>
+  <desc id="desc">Cannabis Chamber wordmark with benchmark chamber mark.</desc>
+  <g fill="#101417">
+    <path d="M18 18h132v24H42v84h108v24H18z"/>
+    <path d="M62 84h20v42H62zM98 66h20v60H98z"/>
+    <text x="184" y="62" font-family="IBM Plex Sans, Arial, sans-serif" font-size="34" font-weight="700">CANNABIS</text>
+    <text x="184" y="100" font-family="IBM Plex Sans, Arial, sans-serif" font-size="34" font-weight="700">CHAMBER</text>
+    <text x="186" y="130" font-family="IBM Plex Sans, Arial, sans-serif" font-size="15" font-weight="600">OF COMMERCE</text>
+  </g>
+</svg>

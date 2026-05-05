@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">The Standard mark</title>
+  <desc id="desc">A hard-edged chamber frame with two benchmark columns.</desc>
+  <path fill="#101417" d="M34 34h188v34H68v120h154v34H34z"/>
+  <path fill="#101417" d="M96 112h28v76H96zM146 86h28v102h-28z"/>
+</svg>
