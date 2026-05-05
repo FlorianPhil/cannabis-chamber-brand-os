@@ -107,8 +107,8 @@
 }
 .dir-chip:hover { border-color: var(--accent); color: var(--accent); }
 
-/* Promise banner */
-.promise-banner {
+/* Status banner */
+.status-banner {
   background: var(--dark);
   padding: 40px 44px;
   margin: 0 0 52px;
@@ -116,7 +116,7 @@
   flex-direction: column;
   gap: 8px;
 }
-.promise-label {
+.status-label {
   font-family: var(--ff-b);
   font-size: 9px;
   font-weight: 700;
@@ -124,7 +124,7 @@
   text-transform: uppercase;
   color: var(--accent);
 }
-.promise-text {
+.status-text {
   font-family: var(--ff-h);
   font-weight: 800;
   font-size: clamp(28px, 4vw, 52px);
@@ -132,6 +132,67 @@
   line-height: 0.96;
   color: #fff;
 }
+.status-note {
+  font-family: var(--ff-b);
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.74);
+  max-width: 720px;
+  margin-top: 12px;
+}
+.status-note a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Current status board */
+.status-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid var(--text);
+  border-left: 1px solid var(--border);
+  margin: 24px 0 52px;
+}
+.status-item {
+  min-height: 210px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.status-item.active { background: var(--accent-soft); }
+.status-item h3 {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 30px);
+}
+.status-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.status-item a {
+  margin-top: auto;
+  font-family: var(--ff-b);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.status-kicker {
+  font-family: var(--ff-b);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+@media (max-width: 900px) { .status-board { grid-template-columns: 1fr; } }
 
 /* Phase indicator */
 .phase-strip {
@@ -161,6 +222,7 @@
   font-weight: 700;
 }
 .phase-step.active::before { content: '→ '; }
+.phase-step.waiting { background: var(--border-soft); }
 </style>
 </head>
 <body>
@@ -190,9 +252,7 @@
     <details class="nav-group" open>
       <summary><span class="group-letter">B</span><span class="group-label">Creative Direction</span></summary>
       <div class="nav-list">
-        <a href="creative-direction-crew.html">B1 The Standard</a>
-        <a href="creative-direction-posse.html">B2 The Forum</a>
-        <a href="creative-direction-tribe.html">B3 The Aperture</a>
+        <a href="creative-direction.html">Creative Direction</a>
       </div>
     </details>
 
@@ -205,9 +265,9 @@
   </div>
 
   <div class="toolbar-mini">
-    <div class="row"><span>Source</span><strong>source.yaml</strong></div>
-    <div class="row"><span>Updated</span><strong>2026-05-04</strong></div>
-    <div class="row"><span>Phase</span><strong>Integration Planning</strong></div>
+    <div class="row"><span>Source</span><strong>Notion Review</strong></div>
+    <div class="row"><span>Updated</span><strong>2026-05-05</strong></div>
+    <div class="row"><span>Phase</span><strong>Strategy Approval</strong></div>
     <div class="row"><span>Built by</span><strong>Brand Therapy</strong></div>
   </div>
 </aside>
@@ -215,29 +275,59 @@
 <main class="content">
 
   <span class="eyebrow">Cannabis Chamber of Commerce &middot; Brand OS</span>
-  <h1 class="page-title">Brand OS<span class="dot">.</span></h1>
-  <p class="page-subtitle">The strategic and creative foundation for the Chamber's rebrand. Source of truth for all brand decisions downstream.</p>
+  <h1 class="page-title">Current status<span class="dot">.</span></h1>
+  <p class="page-subtitle">The Brand OS is paused at strategy approval. Creative direction stays gated until the team approves the shared strategic source.</p>
 
   <div class="meta-row">
     <span><strong>Entity</strong> Nonprofit Trade Association</span>
     <span><strong>Scope</strong> Global B2B Cannabis &amp; Hemp</span>
-    <span><strong>Spectrum</strong> Institutional (5/5)</span>
-    <span><strong>Archetype</strong> Ruler 55 · Sage 30 · Magician 15</span>
+    <span><strong>Status</strong> Strategy Approval</span>
+    <span><strong>Next</strong> Creative Direction Selection</span>
   </div>
 
-  <!-- Promise banner -->
-  <div class="promise-banner">
-    <div class="promise-label">Promise Word</div>
-    <div class="promise-text">Elevating<br>Business Standards</div>
+  <!-- Status banner -->
+  <div class="status-banner">
+    <div class="status-label">Active Source</div>
+    <div class="status-text">Strategy approval<br>before identity.</div>
+    <div class="status-note">The team approval source is the Notion strategy page. Once approved, Section A becomes the shared lens for creative direction, identity decisions, AI workflows, landing pages, emails, events, and social content. <a href="https://www.notion.so/florian-philippe/The-Cannabis-Chamber-of-Commerce-357c22dccbf98080a794eb430c72c19d?source=copy_link" target="_blank" rel="noreferrer">Review the strategy in Notion</a>.</div>
   </div>
 
   <!-- Phase strip -->
   <div class="phase-strip">
     <div class="phase-step done">Brand Therapy</div>
-    <div class="phase-step done">Strategy (Section A)</div>
-    <div class="phase-step active">Direction Review (Section B)</div>
-    <div class="phase-step pending">Identity Decision</div>
-    <div class="phase-step pending">System Build</div>
+    <div class="phase-step active">Strategy Approval</div>
+    <div class="phase-step waiting">Select Creative Direction</div>
+    <div class="phase-step active">Integration Plan</div>
+    <div class="phase-step pending">Identity System</div>
+  </div>
+
+  <div class="section-label">
+    <div class="section-number">01</div>
+    <div class="section-head">
+      <div class="kicker">Workstream Status</div>
+      <h2>What is active now</h2>
+    </div>
+  </div>
+
+  <div class="status-board">
+    <div class="status-item active">
+      <div class="status-kicker">Active</div>
+      <h3>Strategy Approval</h3>
+      <p>Approve Section A strategy, the Focus Star compass, and the Five Ps of positioning before the system creates more identity or content decisions.</p>
+      <a href="https://www.notion.so/florian-philippe/The-Cannabis-Chamber-of-Commerce-357c22dccbf98080a794eb430c72c19d?source=copy_link" target="_blank" rel="noreferrer">Open Notion Source</a>
+    </div>
+    <div class="status-item">
+      <div class="status-kicker">Pending</div>
+      <h3>Select Creative Direction</h3>
+      <p>The previous creative explorations are hidden from the homepage while the strategy is being reviewed by the team.</p>
+      <a href="creative-direction.html">View Status</a>
+    </div>
+    <div class="status-item active">
+      <div class="status-kicker">In Progress</div>
+      <h3>Work On Integration Plan</h3>
+      <p>The operating plan stays active: shared source files, AI reading protocol, Notion/GitHub coordination, Wix events, and social publishing infrastructure.</p>
+      <a href="ai-integration-plan.html">Open Plan</a>
+    </div>
   </div>
 
   <!-- Hub grid -->
@@ -254,59 +344,31 @@
     <a class="hub-card" href="focus-star.html">
       <div class="hub-arrow">&rarr;</div>
       <div class="hub-section-tag">Section A</div>
-      <div class="hub-card-title">Focus Star</div>
-      <div class="hub-card-desc">The five strategic edges: Promise, Audience, Purpose, Personality, Offering. Plus archetype mix, audience definition, and membership tier structure.</div>
-      <div class="hub-status complete">Complete</div>
+      <div class="hub-card-title">Strategy Foundation</div>
+      <div class="hub-card-desc">Section A is temporarily gated while the team reviews the source-of-truth strategy in Notion.</div>
+      <div class="hub-status review">Pending Approval</div>
     </a>
 
-    <div class="hub-card" style="cursor:default;">
+    <a class="hub-card" href="creative-direction.html">
+      <div class="hub-arrow">&rarr;</div>
       <div class="hub-section-tag">Section B</div>
       <div class="hub-card-title">Creative Direction</div>
-      <div class="hub-card-desc">Three strategic identity territories built from the Focus Star and brand style sliders. Review how each direction interprets authority, access, and market transformation.</div>
-      <div class="hub-status review">Under Review</div>
-      <div class="direction-chips">
-        <a class="dir-chip" href="creative-direction-crew.html">B1 The Standard</a>
-        <a class="dir-chip" href="creative-direction-posse.html">B2 The Forum</a>
-        <a class="dir-chip" href="creative-direction-tribe.html">B3 The Aperture</a>
-      </div>
-    </div>
-
-    <a class="hub-card" href="creative-direction-crew.html">
-      <div class="hub-arrow">&rarr;</div>
-      <div class="hub-section-tag">Section B1</div>
-      <div class="hub-card-title">The Standard</div>
-      <div class="hub-card-desc">Benchmark-setting institution. Muted civic palette, hard-edged mark, standards grid, and a visual system built for reports, credentials, and policy trust.</div>
-      <div class="hub-status review">Under Review</div>
-    </a>
-
-    <a class="hub-card" href="creative-direction-posse.html">
-      <div class="hub-arrow">&rarr;</div>
-      <div class="hub-section-tag">Section B2</div>
-      <div class="hub-card-title">The Forum</div>
-      <div class="hub-card-desc">The trusted room where operators, capital, and policy meet. Editorial warmth, circular table mark, council language, and member access as the core value.</div>
-      <div class="hub-status review">Under Review</div>
-    </a>
-
-    <a class="hub-card" href="creative-direction-tribe.html">
-      <div class="hub-arrow">&rarr;</div>
-      <div class="hub-section-tag">Section B3</div>
-      <div class="hub-card-title">The Aperture</div>
-      <div class="hub-card-desc">Future-facing market access system. Dark signal palette, aperture mark, data-ready layouts, and a sharper transformation story for growth-stage leaders.</div>
-      <div class="hub-status review">Under Review</div>
+      <div class="hub-card-desc">Creative direction is waiting on approved strategy. The prior explorations are hidden from the active review path.</div>
+      <div class="hub-status pending">Pending Strategy</div>
     </a>
 
     <a class="hub-card" href="ai-integration-plan.html">
       <div class="hub-arrow">&rarr;</div>
       <div class="hub-section-tag">Section C</div>
       <div class="hub-card-title">AI Integration Plan</div>
-      <div class="hub-card-desc">Approval gate plus three parallel lanes: brand identity development, internal AI/Notion/GitHub integration, and Wix event automation with social publishing.</div>
+      <div class="hub-card-desc">Strategic implementation plan with three parallel lanes: brand identity development, internal AI/Notion/GitHub integration, and Wix event automation.</div>
       <div class="hub-status review">Planning</div>
     </a>
 
     <div class="hub-card" style="cursor:default; opacity:0.5;">
       <div class="hub-section-tag">Sections D &ndash; F</div>
       <div class="hub-card-title">System Build</div>
-      <div class="hub-card-desc">Voice rules, typography system, photography direction, application patterns, and signature device — all downstream outputs of the selected creative direction.</div>
+      <div class="hub-card-desc">Voice rules, typography system, photography direction, application patterns, and signature device. This starts after strategy and direction are approved.</div>
       <div class="hub-status pending">Not Started</div>
     </div>
 

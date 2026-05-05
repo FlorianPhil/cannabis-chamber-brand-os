@@ -3,33 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Strategy Foundation · CCC Brand OS</title>
+<title>Creative Direction · CCC Brand OS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-.approval-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  gap: 0;
+.direction-hold {
   border-top: 2px solid var(--text);
   border-left: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
   margin: 12px 0 52px;
 }
-.approval-main,
-.approval-side {
+.hold-main,
+.hold-side {
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 34px 30px;
 }
-.approval-main {
-  background: var(--accent-soft);
+.hold-main {
+  background: var(--dark);
+  color: var(--white);
 }
-.approval-side {
-  background: var(--bg);
+.hold-main h2,
+.hold-main p {
+  color: var(--white);
 }
-.approval-kicker {
+.hold-main p {
+  color: rgba(255,255,255,0.72);
+}
+.hold-kicker {
   font-family: var(--ff-b);
   font-size: 9px;
   font-weight: 700;
@@ -38,55 +42,51 @@
   color: var(--accent);
   margin-bottom: 14px;
 }
-.approval-main h2,
-.approval-side h2 {
+.hold-main h2,
+.hold-side h2 {
   font-size: clamp(28px, 4vw, 46px);
   margin: 0 0 18px;
 }
-.approval-main p,
-.approval-side p {
-  margin-bottom: 18px;
-  color: var(--text);
-}
-.approval-actions {
+.hold-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 26px;
+  margin-top: 28px;
 }
-.action-link {
-  border: 1px solid var(--text);
+.hold-link {
+  border: 1px solid rgba(255,255,255,0.42);
   padding: 11px 14px;
   font-family: var(--ff-b);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-}
-.action-link.primary {
-  background: var(--text);
   color: var(--white);
 }
-.quiet-list {
+.hold-link.primary {
+  background: var(--white);
+  color: var(--text);
+  border-color: var(--white);
+}
+.decision-list {
   display: grid;
   gap: 12px;
-  margin-top: 18px;
 }
-.quiet-list li {
+.decision-list li {
   border-top: 1px solid var(--border);
   padding-top: 12px;
   font-size: 13px;
   line-height: 1.6;
   color: var(--muted);
 }
-.quiet-list strong {
+.decision-list strong {
   display: block;
   color: var(--text);
   font-weight: 700;
   margin-bottom: 2px;
 }
 @media (max-width: 850px) {
-  .approval-panel { grid-template-columns: 1fr; }
+  .direction-hold { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -110,14 +110,14 @@
     <details class="nav-group" open>
       <summary><span class="group-letter">A</span><span class="group-label">Focus Star</span></summary>
       <div class="nav-list">
-        <a href="focus-star.html" class="active">Strategy Foundation</a>
+        <a href="focus-star.html">Strategy Foundation</a>
       </div>
     </details>
 
     <details class="nav-group" open>
       <summary><span class="group-letter">B</span><span class="group-label">Creative Direction</span></summary>
       <div class="nav-list">
-        <a href="creative-direction.html">Creative Direction</a>
+        <a href="creative-direction.html" class="active">Creative Direction</a>
       </div>
     </details>
 
@@ -130,48 +130,48 @@
   </div>
 
   <div class="toolbar-mini">
-    <div class="row"><span>Source</span><strong>Notion</strong></div>
+    <div class="row"><span>Source</span><strong>Section A</strong></div>
     <div class="row"><span>Updated</span><strong>2026-05-05</strong></div>
-    <div class="row"><span>Phase</span><strong>Strategy Approval</strong></div>
+    <div class="row"><span>Phase</span><strong>Pending Strategy</strong></div>
   </div>
 </aside>
 
 <main class="content">
-  <span class="eyebrow">Section A &middot; Strategy Foundation</span>
-  <h1 class="page-title">Pending strategy approval<span class="dot">.</span></h1>
-  <p class="page-subtitle">The Focus Star, Section A strategy, and positioning details are intentionally hidden while the team reviews the official Notion source.</p>
+  <span class="eyebrow">Section B &middot; Creative Direction</span>
+  <h1 class="page-title">Creative direction waits on strategy<span class="dot">.</span></h1>
+  <p class="page-subtitle">The previous creative explorations are hidden from the active review path until the team approves the strategy foundation.</p>
 
   <div class="meta-row">
-    <span><strong>Status</strong> Approval in progress</span>
-    <span><strong>Visible</strong> Review link only</span>
-    <span><strong>Next</strong> Lock Section A</span>
+    <span><strong>Status</strong> Pending Strategy</span>
+    <span><strong>Hidden</strong> Previous explorations</span>
+    <span><strong>Next</strong> Select Direction</span>
   </div>
 
-  <section class="approval-panel" aria-label="Strategy approval status">
-    <div class="approval-main">
-      <div class="approval-kicker">Review Source</div>
-      <h2>Approve the strategic foundation before the system expands.</h2>
-      <p>Section A is the source layer for creative direction, identity decisions, AI sessions, content production, events, landing pages, email, and social workflows. Until it is approved, this page remains a gated reference point.</p>
-      <div class="approval-actions">
-        <a class="action-link primary" href="https://www.notion.so/florian-philippe/The-Cannabis-Chamber-of-Commerce-357c22dccbf98080a794eb430c72c19d?source=copy_link" target="_blank" rel="noreferrer">Review Strategy In Notion</a>
-        <a class="action-link" href="ai-integration-plan.html">Open Integration Plan</a>
+  <section class="direction-hold" aria-label="Creative direction status">
+    <div class="hold-main">
+      <div class="hold-kicker">Decision Sequence</div>
+      <h2>Approve strategy first. Choose identity territory second.</h2>
+      <p>The creative direction should not become the default source of truth before the strategy is approved. Once Section A is locked, the team can review, revise, or replace the identity territories against the same shared lens.</p>
+      <div class="hold-actions">
+        <a class="hold-link primary" href="https://www.notion.so/florian-philippe/The-Cannabis-Chamber-of-Commerce-357c22dccbf98080a794eb430c72c19d?source=copy_link" target="_blank" rel="noreferrer">Review Strategy In Notion</a>
+        <a class="hold-link" href="ai-integration-plan.html">Open Integration Plan</a>
       </div>
     </div>
-    <div class="approval-side">
-      <div class="approval-kicker">Temporarily Hidden</div>
-      <h2>What stays private for now.</h2>
-      <ul class="quiet-list">
-        <li><strong>Focus Star details</strong> Promise, audience, purpose, personality, and offering language.</li>
-        <li><strong>Positioning system</strong> Five Ps, audience layers, and decision filters.</li>
-        <li><strong>Downstream rules</strong> The working lens that future AI sessions will use after approval.</li>
+    <div class="hold-side">
+      <div class="hold-kicker">After Approval</div>
+      <h2>What gets decided next.</h2>
+      <ul class="decision-list">
+        <li><strong>Creative territory</strong> Select the strategic identity direction or ask for a revised set.</li>
+        <li><strong>Visual rules</strong> Align colors, typography, photography, logo behavior, and signature device.</li>
+        <li><strong>Template path</strong> Move into flyer templates and social/event assets after the identity language is stable.</li>
       </ul>
     </div>
   </section>
 
   <footer class="page-footer">
     <span><a href="index.html">&larr; Home</a></span>
-    <span>Section A &middot; Strategy Approval</span>
-    <span><a href="creative-direction.html">Creative Direction &rarr;</a></span>
+    <span>Section B &middot; Pending Strategy</span>
+    <span><a href="ai-integration-plan.html">Integration Plan &rarr;</a></span>
   </footer>
 
 </main>
