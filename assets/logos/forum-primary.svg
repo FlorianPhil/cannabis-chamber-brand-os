@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 168" role="img" aria-labelledby="title desc">
+  <title id="title">The Forum primary logo</title>
+  <desc id="desc">Cannabis Chamber wordmark with circular forum table mark.</desc>
+  <g fill="none" stroke="#151A1F" stroke-width="18">
+    <circle cx="84" cy="84" r="52"/>
+    <path d="M44 84h80"/>
+    <path d="M84 44v80"/>
+  </g>
+  <circle cx="84" cy="84" r="12" fill="#151A1F"/>
+  <g fill="#151A1F">
+    <text x="164" y="62" font-family="Source Serif 4, Georgia, serif" font-size="35" font-weight="700">Cannabis</text>
+    <text x="164" y="101" font-family="Source Serif 4, Georgia, serif" font-size="35" font-weight="700">Chamber</text>
+    <text x="166" y="131" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">OF COMMERCE</text>
+  </g>
+</svg>

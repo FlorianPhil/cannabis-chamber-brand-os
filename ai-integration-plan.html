@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Integration Plan &middot; CCC Brand OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+:root {
+  --accent: #1B6B44;
+  --accent-soft: rgba(27, 107, 68, 0.10);
+  --bg: #F8F7F1;
+  --panel: #FFFFFF;
+  --dark: #101417;
+  --text: #101417;
+  --muted: #66736B;
+  --border: #D9D6CA;
+  --border-soft: #ECE9DE;
+  --brand: #1B6B44;
+  --identity: #174E38;
+  --internal: #385F8A;
+  --events: #9A6432;
+  --cloud: #553C66;
+}
+
+.ai-plan * {
+  letter-spacing: 0 !important;
+}
+
+.ai-plan main.content {
+  max-width: 1280px;
+}
+
+.ai-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 48px;
+  align-items: end;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 46px;
+}
+
+.ai-hero h1 {
+  max-width: 12ch;
+}
+
+.ai-hero .page-subtitle {
+  font-family: var(--ff-b);
+  font-size: clamp(17px, 1.8vw, 22px);
+  line-height: 1.55;
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+.plan-seal {
+  min-height: 280px;
+  border: 1px solid var(--border);
+  background: var(--dark);
+  color: #fff;
+  padding: 28px;
+  display: grid;
+  align-content: space-between;
+}
+
+.seal-kicker,
+.gate-kicker,
+.lane-kicker,
+.micro-label {
+  font-family: var(--ff-b);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.seal-title {
+  font-family: var(--ff-h);
+  font-size: 34px;
+  line-height: 1.02;
+  font-weight: 800;
+}
+
+.seal-foot {
+  font-family: var(--ff-b);
+  font-size: 12px;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.5;
+}
+
+.foundation-gate {
+  background: var(--dark);
+  color: #fff;
+  padding: 34px;
+  margin: 0 0 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.45fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.foundation-gate h2 {
+  color: #fff;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.02;
+  margin: 8px 0 14px;
+}
+
+.foundation-gate p {
+  color: rgba(255,255,255,0.72);
+  font-family: var(--ff-b);
+  font-size: 14px;
+  max-width: 760px;
+  margin: 0;
+}
+
+.approval-list {
+  display: grid;
+  gap: 8px;
+}
+
+.approval-item {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-family: var(--ff-b);
+  font-size: 12px;
+  color: rgba(255,255,255,0.78);
+}
+
+.approval-item strong {
+  color: #fff;
+  display: block;
+  font-size: 13px;
+}
+
+.approval-dot {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--accent);
+  margin-top: 3px;
+}
+
+.operating-rule {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  margin: 0 0 42px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+.operating-rule .micro-label {
+  padding: 22px;
+  border-right: 1px solid var(--border);
+  color: var(--accent);
+}
+
+.operating-rule p {
+  padding: 22px 26px;
+  margin: 0;
+  max-width: 100%;
+  color: var(--text);
+  font-family: var(--ff-b);
+  font-size: 14px;
+}
+
+.implementation-map {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  margin: 0 0 44px;
+  padding: 28px;
+}
+
+.map-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.45fr);
+  gap: 28px;
+  align-items: end;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--text);
+  margin-bottom: 24px;
+}
+
+.map-header h2 {
+  font-size: clamp(30px, 4.2vw, 54px);
+  line-height: 1;
+  margin: 8px 0 0;
+}
+
+.map-header p {
+  font-family: var(--ff-b);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.flow-node {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 18px;
+}
+
+.flow-node.dark {
+  background: var(--dark);
+  color: #fff;
+  border-color: var(--dark);
+}
+
+.flow-node.dark .node-body,
+.flow-node.dark .node-list li {
+  color: rgba(255,255,255,0.72);
+}
+
+.flow-node.dark .node-list li {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.flow-node.dark .node-list strong {
+  color: #fff;
+}
+
+.node-label {
+  font-family: var(--ff-b);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.node-title {
+  font-family: var(--ff-h);
+  font-weight: 800;
+  font-size: clamp(18px, 2.1vw, 27px);
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.node-body {
+  font-family: var(--ff-b);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+  max-width: 100%;
+}
+
+.node-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.node-list li {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.45);
+  padding: 10px;
+  font-family: var(--ff-b);
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.node-list strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--ff-h);
+  font-size: 13px;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.map-arrow {
+  width: 2px;
+  height: 34px;
+  background: var(--text);
+  margin: 0 auto;
+  position: relative;
+}
+
+.map-arrow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--text);
+  border-bottom: 2px solid var(--text);
+  transform: translateX(-50%) rotate(45deg);
+  background: var(--panel);
+}
+
+.split-band {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  margin: 2px 0 18px;
+}
+
+.split-band::before,
+.split-band::after {
+  content: "";
+  height: 2px;
+  background: var(--border);
+}
+
+.split-band span {
+  font-family: var(--ff-b);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.flow-lanes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.flow-lane {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.flow-lane::before {
+  content: "";
+  position: absolute;
+  top: 82px;
+  bottom: 84px;
+  left: 31px;
+  width: 2px;
+  background: var(--border);
+}
+
+.flow-lane.identity { --lane-color: var(--identity); }
+.flow-lane.internal { --lane-color: var(--internal); }
+.flow-lane.events { --lane-color: var(--events); }
+
+.lane-flow-head {
+  border-bottom: 3px solid var(--lane-color);
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.lane-flow-head .lane-kicker {
+  color: var(--lane-color);
+}
+
+.lane-flow-title {
+  font-family: var(--ff-h);
+  font-weight: 800;
+  font-size: clamp(22px, 2.4vw, 31px);
+  line-height: 1.02;
+  margin-top: 8px;
+}
+
+.flow-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  align-items: start;
+  min-height: 86px;
+}
+
+.flow-step-num {
+  width: 32px;
+  height: 32px;
+  background: var(--lane-color);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-b);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.flow-step-copy {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 12px;
+}
+
+.flow-step-copy h3 {
+  font-family: var(--ff-h);
+  font-size: 15px;
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.flow-step-copy p {
+  font-family: var(--ff-b);
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dependency-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.dependency {
+  border: 1px dashed var(--border);
+  padding: 14px;
+  background: var(--border-soft);
+  font-family: var(--ff-b);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.dependency strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--ff-h);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.convergence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.operating-loop {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  margin-top: 16px;
+}
+
+.loop-step {
+  padding: 12px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--ff-b);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.loop-step strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--ff-h);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.decision-box {
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  padding: 18px;
+}
+
+.decision-box strong {
+  display: block;
+  font-family: var(--ff-h);
+  font-size: 22px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.decision-box p {
+  font-family: var(--ff-b);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+
+.parallel-note {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  margin: 28px 0 52px;
+}
+
+.note-cell {
+  padding: 20px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.note-cell strong {
+  display: block;
+  font-family: var(--ff-h);
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.note-cell p {
+  font-family: var(--ff-b);
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.handoff-strip {
+  background: var(--dark);
+  color: #fff;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.35fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.handoff-strip h2 {
+  color: #fff;
+  font-size: clamp(26px, 3.4vw, 44px);
+  margin: 0 0 8px;
+}
+
+.handoff-strip p {
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+  font-family: var(--ff-b);
+  font-size: 13.5px;
+}
+
+.handoff-badge {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 18px;
+  font-family: var(--ff-b);
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .ai-hero,
+  .foundation-gate,
+  .operating-rule,
+  .map-header,
+  .flow-lanes,
+  .dependency-row,
+  .convergence,
+  .parallel-note,
+  .handoff-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .operating-rule .micro-label {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .node-list,
+  .operating-loop {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .plan-seal {
+    min-height: 220px;
+  }
+
+  .foundation-gate,
+  .handoff-strip {
+    padding: 24px;
+  }
+
+  .implementation-map {
+    padding: 18px;
+  }
+
+  .split-band {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .split-band::before,
+  .split-band::after {
+    display: none;
+  }
+}
+</style>
+</head>
+<body class="ai-plan">
+<div class="shell">
+
+<aside class="sidebar">
+  <div class="brand-mark">
+    <div class="wordmark">Cannabis Chamber<br>of Commerce</div>
+    <div class="sub">Brand OS &middot; v2 &middot; 2026</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="label">Sections</div>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">&middot;</span><span class="group-label">Overview</span></summary>
+      <div class="nav-list"><a href="index.html">Home</a></div>
+    </details>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">A</span><span class="group-label">Focus Star</span></summary>
+      <div class="nav-list"><a href="focus-star.html">Strategy Foundation</a></div>
+    </details>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">B</span><span class="group-label">Creative Direction</span></summary>
+      <div class="nav-list">
+        <a href="creative-direction-crew.html">B1 The Standard</a>
+        <a href="creative-direction-posse.html">B2 The Forum</a>
+        <a href="creative-direction-tribe.html">B3 The Aperture</a>
+      </div>
+    </details>
+
+    <details class="nav-group" open>
+      <summary><span class="group-letter">C</span><span class="group-label">AI Integration</span></summary>
+      <div class="nav-list"><a href="ai-integration-plan.html" class="active">C1 Integration Plan</a></div>
+    </details>
+  </div>
+
+  <div class="toolbar-mini">
+    <div class="row"><span>Source</span><strong>Brand OS</strong></div>
+    <div class="row"><span>Updated</span><strong>2026-05-04</strong></div>
+    <div class="row"><span>Phase</span><strong>Integration Plan</strong></div>
+  </div>
+</aside>
+
+<main class="content">
+
+  <section class="ai-hero">
+    <div>
+      <span class="eyebrow">Cannabis Chamber of Commerce &middot; AI Integration</span>
+      <h1 class="page-title">One source. Many sessions<span class="dot">.</span></h1>
+      <p class="page-subtitle">A practical rollout plan for making the approved Brand OS the shared lens for every AI session, member workflow, content draft, strategy pass, landing page, email, event asset, and social post.</p>
+    </div>
+    <div class="plan-seal">
+      <div class="seal-kicker">Operating Model</div>
+      <div class="seal-title">Brand OS<br>as source of truth</div>
+      <div class="seal-foot">Approved strategy flows into identity, internal AI workflows, and event automation in parallel.</div>
+    </div>
+  </section>
+
+  <section class="implementation-map" aria-label="Strategic implementation flowchart">
+    <div class="map-header">
+      <div>
+        <div class="micro-label">Strategic Implementation Map</div>
+        <h2>From approved strategy to operating system.</h2>
+      </div>
+      <p>This is the whole rollout as a sequence: approve the source, build the shared infrastructure, run three parallel lanes, then converge into one repeatable content and event engine.</p>
+    </div>
+
+    <div class="flow-node dark">
+      <div class="node-label">Gate 00 &middot; Approval</div>
+      <div class="node-title">Approve Brand OS Section A as the canonical strategy layer.</div>
+      <p class="node-body">Nothing scales cleanly until the strategy is approved. This gate locks the Focus Star compass, Five Ps positioning, audience, promise, purpose, personality, and offering.</p>
+      <ul class="node-list">
+        <li><strong>Decision</strong> Strategy approved by Chamber leadership.</li>
+        <li><strong>Rule</strong> Every AI session starts from this source.</li>
+        <li><strong>Filter</strong> Raise a standard, create opportunity, or correct a misconception.</li>
+      </ul>
+    </div>
+
+    <div class="map-arrow"></div>
+
+    <div class="flow-node">
+      <div class="node-label">Foundation 01 &middot; Source Infrastructure</div>
+      <div class="node-title">Create the shared source-of-truth system before adding automation.</div>
+      <p class="node-body">This layer makes the Brand OS readable by humans, AI sessions, collaborators, and future workflows. It prevents different tools from inventing different versions of the Chamber.</p>
+      <ul class="node-list">
+        <li><strong>GitHub</strong> Shared repository for source files, docs, version history, and AI-readable instructions.</li>
+        <li><strong>Notion</strong> Strategy hub, CRM context, event databases, calendar planning, and team-facing documentation.</li>
+        <li><strong>Cloud Folder</strong> Shared assets, templates, exports, logos, flyers, photography, and working files.</li>
+        <li><strong>Accounts</strong> Access for members, AI tools, collaborators, and publishing services.</li>
+        <li><strong>Skills</strong> Lightweight Brand OS reading instructions for each AI environment.</li>
+        <li><strong>Protocol</strong> Session start, source read, brand check, draft, review, and handoff.</li>
+      </ul>
+    </div>
+
+    <div class="map-arrow"></div>
+    <div class="split-band"><span>Parallel build begins after the source is approved and accessible</span></div>
+
+    <div class="flow-lanes">
+      <div class="flow-lane identity">
+        <div class="lane-flow-head">
+          <div class="lane-kicker">Lane 01</div>
+          <div class="lane-flow-title">Brand Identity Development</div>
+        </div>
+        <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-copy"><h3>Finalize Creative Direction</h3><p>Select the territory and identify what carries into the identity system.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-copy"><h3>Lock Colors And Fonts</h3><p>Approve palette and typography so all templates share the same design rules.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-copy"><h3>Define Photo Style</h3><p>Set the image language for operators, facilities, boardrooms, events, and policy.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-copy"><h3>Develop Logo And Signature</h3><p>Refine the logo system and create the recognizable visual device.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-copy"><h3>Build Flyer Templates</h3><p>Create reusable event templates designed around structured event data.</p></div></div>
+      </div>
+
+      <div class="flow-lane internal">
+        <div class="lane-flow-head">
+          <div class="lane-kicker">Lane 02</div>
+          <div class="lane-flow-title">Internal AI Integration</div>
+        </div>
+        <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-copy"><h3>Create Shared Repository</h3><p>Make GitHub the clean access point for approved source files and AI-readable docs.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-copy"><h3>Map Notion And Cloud</h3><p>Connect strategy, CRM notes, briefs, assets, and working folders into one operating view.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-copy"><h3>Set Permissions</h3><p>Give humans and AI accounts access to the right repositories, pages, and folders.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-copy"><h3>Create Reading Skills</h3><p>Build instructions so each AI reads the Focus Star quickly before producing work.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-copy"><h3>Define Session Protocol</h3><p>Every strategy, page, email, flyer, and post begins from source, not memory.</p></div></div>
+      </div>
+
+      <div class="flow-lane events">
+        <div class="lane-flow-head">
+          <div class="lane-kicker">Lane 03</div>
+          <div class="lane-flow-title">Wix Events Integration</div>
+        </div>
+        <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-copy"><h3>Connect Wix, Notion CRM, And Cloud</h3><p>Sync event data, CRM context, asset storage, and working materials.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-copy"><h3>Build Social Calendar</h3><p>Create a Notion calendar for events, channels, copy status, assets, timing, and owner.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-copy"><h3>Create Event Reminders</h3><p>Generate reminder tasks and AI copy prompts from the approved event details.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-copy"><h3>Prepare Buffer</h3><p>Create the Buffer account, connect API access, test posting, and add social accounts.</p></div></div>
+        <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-copy"><h3>Move From Draft To Publish</h3><p>Start with review mode, then automate publishing once the approval loop is trusted.</p></div></div>
+      </div>
+    </div>
+
+    <div class="dependency-row">
+      <div class="dependency"><strong>Identity feeds events</strong> Flyer templates, logo rules, image style, and typography become the event asset system.</div>
+      <div class="dependency"><strong>Internal system feeds every lane</strong> GitHub, Notion, Cloud, accounts, and AI skills keep all sessions using the same source.</div>
+      <div class="dependency"><strong>Event data feeds content</strong> Wix and Notion fields become the raw material for emails, flyers, reminders, and social copy.</div>
+    </div>
+
+    <div class="map-arrow"></div>
+
+    <div class="convergence">
+      <div class="flow-node dark">
+        <div class="node-label">Convergence 04 &middot; Chamber Operating System</div>
+        <div class="node-title">The lanes merge into one repeatable production system.</div>
+        <p class="node-body">At this point the Chamber has brand rules, shared AI context, structured event data, templates, and a review process that can support consistent publishing.</p>
+        <ul class="node-list">
+          <li><strong>Identity System</strong> Logo, colors, fonts, photography, signature, and flyer templates.</li>
+          <li><strong>AI Protocol</strong> Source read, brand lens, draft rules, approvals, and shared memory boundaries.</li>
+          <li><strong>Event Engine</strong> Wix event data, Notion CRM, social calendar, Buffer, and publishing workflow.</li>
+        </ul>
+      </div>
+      <div class="decision-box">
+        <strong>Checkpoint before automation</strong>
+        <p>Do not fully automate publishing until the source file, identity rules, event fields, AI prompts, and human approval loop have all been tested.</p>
+      </div>
+    </div>
+
+    <div class="map-arrow"></div>
+
+    <div class="flow-node">
+      <div class="node-label">Production Loop 05 &middot; Repeatable Workflow</div>
+      <div class="node-title">Every event and content request moves through the same operating loop.</div>
+      <div class="operating-loop">
+        <div class="loop-step"><strong>Brief</strong> Event or content request enters Notion.</div>
+        <div class="loop-step"><strong>Read</strong> AI reads Brand OS and event data.</div>
+        <div class="loop-step"><strong>Draft</strong> Copy and assets are generated from approved rules.</div>
+        <div class="loop-step"><strong>Review</strong> Human approves or revises before publishing.</div>
+        <div class="loop-step"><strong>Publish</strong> Buffer/Wix/social channels execute and learnings return to Notion.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="parallel-note">
+    <div class="note-cell"><strong>Parallel Means Coordinated</strong><p>Identity, internal AI setup, and Wix events can move at the same time, but all three depend on the approved Brand OS source.</p></div>
+    <div class="note-cell"><strong>Templates Need Data</strong><p>Flyers and social templates should be designed with event fields in mind: title, date, location, speaker, CTA, tier, and channel.</p></div>
+    <div class="note-cell"><strong>Automation Starts With Review</strong><p>The first automation goal is useful drafts and reminders. Publishing can wait until the copy and approval loop are trusted.</p></div>
+  </section>
+
+  <section class="handoff-strip">
+    <div>
+      <h2>Next decision: approve the foundation.</h2>
+      <p>Once Section A is approved, the Chamber can safely move into identity decisions, shared AI workflows, and event-system integration without each lane inventing its own version of the brand.</p>
+    </div>
+    <div class="handoff-badge">Ready for review</div>
+  </section>
+
+  <footer class="page-footer">
+    <span><a href="index.html">&larr; Home</a></span>
+    <span>Section C &middot; AI Integration Plan</span>
+    <span><a href="focus-star.html">Section A &rarr;</a></span>
+  </footer>
+
+</main>
+</div>
+</body>
+</html>
